@@ -165,6 +165,28 @@ namespace DAL_BankManagement
             return (rowsAffected > 0);
         }
 
+        public static bool DeactivateUser(int UserID)
+        {
+            int rowsAffected = 0;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_DeactivateUser", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@UserID", UserID);
+
+                try
+                {
+                    connection.Open();
+                    rowsAffected = command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                }
+            }
+            return (rowsAffected > 0);
+        }
+
         public static bool IsUserExist(int UserID)
         {
             bool isFound = false;

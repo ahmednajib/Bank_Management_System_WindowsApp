@@ -135,11 +135,6 @@ namespace BLL_BankManagement
             return false;
         }
 
-        public static DataTable GetAllPeople()
-        {
-            return clsPersonData.GetAllPeople();
-        }
-
         public static bool DeletePerson(int PersonID)
         {
             return clsPersonData.DeletePerson(PersonID);

@@ -25,6 +25,7 @@ namespace BLL_BankManagement
             this.UserID = -1;
             this.UserName = "";
             this.Password = "";
+            this.PersonInfo = new clsPerson();
             this.IsActive = true;
 
             Mode = enMode.AddNew;
@@ -84,6 +85,12 @@ namespace BLL_BankManagement
 
         public bool Save()
         {
+            // Strategy: Always ensure the Person is saved/updated first
+            if (!this.PersonInfo.Save())
+                return false;
+
+            this.PersonID = this.PersonInfo.PersonID;
+
             switch (Mode)
             {
                 case enMode.AddNew:
@@ -107,9 +114,31 @@ namespace BLL_BankManagement
             return clsUserData.GetAllUsers();
         }
 
+        /// <summary>
+        /// Performs a Soft Delete by setting IsActive to false.
+        /// </summary>
         public static bool DeleteUser(int UserID)
         {
-            return clsUserData.DeleteUser(UserID);
+            // For security and auditing in banking, we deactivate the user instead of a hard delete.
+            return clsUserData.DeactivateUser(UserID);
+        }
+
+        /// <summary>
+        /// Deletes the User record and then the Person record (Hard Delete).
+        /// </summary>
+        public static bool HardDeleteUser(int UserID)
+        {
+            clsUser User = clsUser.FindByUserID(UserID);
+            if (User != null)
+            {
+                // Delete User first to satisfy Foreign Key constraints
+                if (clsUserData.DeleteUser(UserID))
+                {
+                    // Only delete the person if the user record was successfully removed
+                    return clsPerson.DeletePerson(User.PersonID);
+                }
+            }
+            return false;
         }
 
         public static bool IsUserExist(int UserID)

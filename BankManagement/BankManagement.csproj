@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\ManageClients\frmManageClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\ManageClients\frmManageClients.Designer.cs">
+      <DependentUpon>frmManageClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="global classes\clsFormat.cs" />
     <Compile Include="global classes\clsGlobal.cs" />
     <Compile Include="global classes\clsHashing.cs" />
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clients\ManageClients\frmManageClients.resx">
+      <DependentUpon>frmManageClients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,7 +115,6 @@
     <None Include="images\BankLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Clients\" />
     <Folder Include="Currency Exchange\" />
     <Folder Include="Transactions\" />
     <Folder Include="Users\" />

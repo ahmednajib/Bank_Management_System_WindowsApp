@@ -39,7 +39,7 @@
             this.btnDeleteClient = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNewClient = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnListAllClients = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageClients = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlMainContainer = new Guna.UI2.WinForms.Guna2Panel();
@@ -59,7 +59,7 @@
             this.pnlSideBar.Controls.Add(this.btnDeleteClient);
             this.pnlSideBar.Controls.Add(this.btnAddNewClient);
             this.pnlSideBar.Controls.Add(this.guna2Separator2);
-            this.pnlSideBar.Controls.Add(this.btnListAllClients);
+            this.pnlSideBar.Controls.Add(this.btnManageClients);
             this.pnlSideBar.Controls.Add(this.guna2Separator1);
             this.pnlSideBar.Controls.Add(this.guna2PictureBox1);
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -83,11 +83,12 @@
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnLogout.Location = new System.Drawing.Point(10, 713);
+            this.btnLogout.Location = new System.Drawing.Point(10, 714);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(180, 45);
             this.btnLogout.TabIndex = 14;
             this.btnLogout.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCurrencyExchange
             // 
@@ -252,24 +253,25 @@
             this.guna2Separator2.TabIndex = 5;
             this.guna2Separator2.UseTransparentBackground = true;
             // 
-            // btnListAllClients
+            // btnManageClients
             // 
-            this.btnListAllClients.BackColor = System.Drawing.Color.Transparent;
-            this.btnListAllClients.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-            this.btnListAllClients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnListAllClients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnListAllClients.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnListAllClients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnListAllClients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnListAllClients.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListAllClients.ForeColor = System.Drawing.Color.White;
-            this.btnListAllClients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnListAllClients.Location = new System.Drawing.Point(10, 171);
-            this.btnListAllClients.Name = "btnListAllClients";
-            this.btnListAllClients.Size = new System.Drawing.Size(180, 45);
-            this.btnListAllClients.TabIndex = 4;
-            this.btnListAllClients.Text = "List All Clients";
-            this.btnListAllClients.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageClients.BackColor = System.Drawing.Color.Transparent;
+            this.btnManageClients.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnManageClients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageClients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageClients.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageClients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageClients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnManageClients.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageClients.ForeColor = System.Drawing.Color.White;
+            this.btnManageClients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnManageClients.Location = new System.Drawing.Point(10, 171);
+            this.btnManageClients.Name = "btnManageClients";
+            this.btnManageClients.Size = new System.Drawing.Size(180, 45);
+            this.btnManageClients.TabIndex = 4;
+            this.btnManageClients.Text = "Manage Clients";
+            this.btnManageClients.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageClients.Click += new System.EventHandler(this.btnManageClients_Click);
             // 
             // guna2Separator1
             // 
@@ -297,9 +299,11 @@
             // 
             // pnlMainContainer
             // 
+            this.pnlMainContainer.BackColor = System.Drawing.Color.LightGray;
             this.pnlMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainContainer.Location = new System.Drawing.Point(200, 0);
             this.pnlMainContainer.Name = "pnlMainContainer";
+            this.pnlMainContainer.Padding = new System.Windows.Forms.Padding(15, 15, 30, 30);
             this.pnlMainContainer.Size = new System.Drawing.Size(1186, 788);
             this.pnlMainContainer.TabIndex = 1;
             // 
@@ -327,7 +331,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnlMainContainer;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2Button btnListAllClients;
+        private Guna.UI2.WinForms.Guna2Button btnManageClients;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2Button btnCurrencyExchange;
         private Guna.UI2.WinForms.Guna2Button btnLoginHistory;
