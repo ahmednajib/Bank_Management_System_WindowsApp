@@ -112,10 +112,10 @@ namespace BankManagement.PersonalInformation.Components
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            if (!this.ValidateChildren())
+            if (txtFilterValue.Text == "")
             {
                 //Here we dont continue becuase the form is not valid
-                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the error", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill in the field", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             FindNow();
@@ -138,20 +138,6 @@ namespace BankManagement.PersonalInformation.Components
         {
             cbFilterBy.SelectedIndex = 0; // Default selection for filter
             txtFilterValue.Focus(); // Set focus to the filter text box
-        }
-
-        private void txtFilterValue_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtFilterValue.Text.Trim()))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(txtFilterValue, "This field is required!");
-            }
-            else
-            {
-                //e.Cancel = false;
-                errorProvider1.SetError(txtFilterValue, null);
-            }
         }
 
         private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)

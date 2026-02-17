@@ -286,7 +286,7 @@ namespace BankManagement.PersonalInformation
 
         private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(((TextBox)sender).Text))
+            if (string.IsNullOrWhiteSpace(((Guna.UI2.WinForms.Guna2TextBox)sender).Text))
             {
                 e.Cancel = true;
                 errorProvider1.SetError((Control)sender, "This field cannot be empty!");

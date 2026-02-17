@@ -1,4 +1,5 @@
-﻿using BankManagement.Clients.ManageClients;
+﻿using BankManagement.Clients.Add_Update_Client;
+using BankManagement.Clients.ManageClients;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,7 +89,10 @@ namespace BankManagement
 
         private void btnAddNewClient_Click(object sender, EventArgs e)
         {
+            Guna.UI2.WinForms.Guna2Button clickedButton = (Guna.UI2.WinForms.Guna2Button)sender;
             
+            // Pass the form you created for the Client List
+            OpenChildForm(new frmAddUpdateClient(), clickedButton);
         }
     }
 }

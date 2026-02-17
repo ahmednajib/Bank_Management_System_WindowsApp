@@ -28,20 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ctrlPersonCardWithFilter1 = new BankManagement.PersonalInformation.Components.ctrlPersonCardWithFilter();
             this.SuspendLayout();
+            // 
+            // ctrlPersonCardWithFilter1
+            // 
+            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
+            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
+            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(594, 303);
+            this.ctrlPersonCardWithFilter1.TabIndex = 0;
             // 
             // frmAddUpdateClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(592, 396);
+            this.Controls.Add(this.ctrlPersonCardWithFilter1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddUpdateClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddUpdateClient";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private PersonalInformation.Components.ctrlPersonCardWithFilter ctrlPersonCardWithFilter1;
     }
 }
