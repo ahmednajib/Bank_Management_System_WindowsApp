@@ -241,6 +241,7 @@
             this.btnAddNewClient.TabIndex = 6;
             this.btnAddNewClient.Text = "Add New Client";
             this.btnAddNewClient.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddNewClient.Click += new System.EventHandler(this.btnAddNewClient_Click);
             // 
             // guna2Separator2
             // 

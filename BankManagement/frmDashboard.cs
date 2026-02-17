@@ -15,32 +15,52 @@ namespace BankManagement
     {
         private Form activeForm = null;
 
-        private void OpenChildForm(Form childForm)
+        // Define your colors here so you can change them easily in one place
+        private readonly Color SidebarButtonDefaultColor = Color.FromArgb(45, 45, 45); // Your normal sidebar color
+        private readonly Color SidebarButtonActiveColor = Color.DimGray; // Your highlight color
+
+        private void ResetButtonColors()
         {
-            // 1. Clear existing form just like before
+            // This assumes all your navigation buttons are inside a panel (e.g., pnlSidebar)
+            // It loops through them and sets them back to the default color
+            foreach (Control ctrl in pnlSideBar.Controls)
+            {
+                if (ctrl is Guna.UI2.WinForms.Guna2Button btn)
+                {
+                    if(!(btn.Name == "btnLogout"))
+                        btn.FillColor = SidebarButtonDefaultColor;
+                }
+            }
+        }
+
+        private void OpenChildForm(Form childForm, Guna.UI2.WinForms.Guna2Button btn)
+        {
+            // 1. Reset all buttons first
+            ResetButtonColors();
+
+            // 2. Highlight the one that was just clicked
+            btn.FillColor = SidebarButtonActiveColor;
+
+            // 3. Close the previous form to save memory
+            if (activeForm != null)
+                activeForm.Close();
+
+            this.activeForm = childForm;
+
+            // 4. Clear the container panel
             if (pnlMainContainer.Controls.Count > 0)
                 pnlMainContainer.Controls[0].Dispose();
 
-            // 2. Setup basic properties
+            // 5. Setup basic properties for the child "Card" form
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-
-            // --- THE FIX STARTS HERE ---
-
-            // TURN OFF Docking. It conflicts with Guna2BorderlessForm.
             childForm.Dock = DockStyle.None;
-
-            // Use Anchoring instead. This tells the form: 
-            // "If the container gets bigger, stretch with it in all directions."
             childForm.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
-            // Manually set the size to fit exactly inside the container's padded area.
-            // DisplayRectangle gets the area *inside* the padding you set earlier.
+            // This ensures the form fits perfectly inside the padding you set
             childForm.Bounds = pnlMainContainer.DisplayRectangle;
 
-            // --- THE FIX ENDS HERE ---
-
-            // 4. Add to container and show
+            // 6. Add and show
             pnlMainContainer.Controls.Add(childForm);
             pnlMainContainer.Tag = childForm;
             childForm.Show();
@@ -53,8 +73,9 @@ namespace BankManagement
 
         private void btnManageClients_Click(object sender, EventArgs e)
         {
+            Guna.UI2.WinForms.Guna2Button clickedButton = (Guna.UI2.WinForms.Guna2Button)sender;
             // Pass the form you created for the Client List
-            OpenChildForm(new frmManageClients());
+            OpenChildForm(new frmManageClients(), clickedButton);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -63,6 +84,11 @@ namespace BankManagement
             this.Close();
             frm.ShowDialog();
 
+        }
+
+        private void btnAddNewClient_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

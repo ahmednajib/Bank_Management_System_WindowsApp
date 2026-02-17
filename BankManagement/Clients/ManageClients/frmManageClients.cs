@@ -2,7 +2,6 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace BankManagement.Clients.ManageClients
 {

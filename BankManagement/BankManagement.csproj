@@ -115,6 +115,7 @@
     <None Include="images\BankLogo.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Clients\Add New Client\" />
     <Folder Include="Currency Exchange\" />
     <Folder Include="Transactions\" />
     <Folder Include="Users\" />
