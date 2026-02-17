@@ -180,5 +180,35 @@ namespace BankManagement.Clients.ManageClients
             // Best practice: Count from the View, not the Grid rows, for accuracy
             lblNumberOfRecords.Text = _dtAllClients.DefaultView.Count.ToString();
         }
+
+        private void addNewClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Will be written later
+        }
+
+        private void updateClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Will be written later
+        }
+
+        private void findClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Will be written later
+        }
+
+        private void diactivateClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Will be written later
+        }
+
+        private void activateClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Will be written later
+        }
+
+        private void addAnAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Will be written later
+        }
     }
 }

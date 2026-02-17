@@ -268,50 +268,56 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(173, 142);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(181, 164);
             // 
             // addNewClientToolStripMenuItem
             // 
             this.addNewClientToolStripMenuItem.Name = "addNewClientToolStripMenuItem";
-            this.addNewClientToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.addNewClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addNewClientToolStripMenuItem.Text = "Add new client";
+            this.addNewClientToolStripMenuItem.Click += new System.EventHandler(this.addNewClientToolStripMenuItem_Click);
             // 
             // updateClientToolStripMenuItem
             // 
             this.updateClientToolStripMenuItem.Name = "updateClientToolStripMenuItem";
-            this.updateClientToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.updateClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateClientToolStripMenuItem.Text = "Update client";
+            this.updateClientToolStripMenuItem.Click += new System.EventHandler(this.updateClientToolStripMenuItem_Click);
             // 
             // findClientToolStripMenuItem
             // 
             this.findClientToolStripMenuItem.Name = "findClientToolStripMenuItem";
-            this.findClientToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.findClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.findClientToolStripMenuItem.Text = "Find client";
+            this.findClientToolStripMenuItem.Click += new System.EventHandler(this.findClientToolStripMenuItem_Click);
             // 
             // diactivateClientToolStripMenuItem
             // 
             this.diactivateClientToolStripMenuItem.Name = "diactivateClientToolStripMenuItem";
-            this.diactivateClientToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.diactivateClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.diactivateClientToolStripMenuItem.Text = "Diactivate client";
+            this.diactivateClientToolStripMenuItem.Click += new System.EventHandler(this.diactivateClientToolStripMenuItem_Click);
             // 
             // activateClientToolStripMenuItem
             // 
             this.activateClientToolStripMenuItem.Name = "activateClientToolStripMenuItem";
-            this.activateClientToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.activateClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.activateClientToolStripMenuItem.Text = "Activate client";
+            this.activateClientToolStripMenuItem.Click += new System.EventHandler(this.activateClientToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.toolStripSeparator1.ForeColor = System.Drawing.Color.Navy;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // addAnAccountToolStripMenuItem
             // 
             this.addAnAccountToolStripMenuItem.Name = "addAnAccountToolStripMenuItem";
-            this.addAnAccountToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.addAnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addAnAccountToolStripMenuItem.Text = "Manage Accounts";
+            this.addAnAccountToolStripMenuItem.Click += new System.EventHandler(this.addAnAccountToolStripMenuItem_Click);
             // 
             // bottomPanel
             // 
