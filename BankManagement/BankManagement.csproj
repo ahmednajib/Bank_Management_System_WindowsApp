@@ -102,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clients\Add&amp;Update Client\frmAddUpdateClient.resx">
+      <DependentUpon>frmAddUpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients\ManageClients\frmManageClients.resx">
       <DependentUpon>frmManageClients.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalInformation\Components\ctrlPersonCardWithFilter.resx">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalInformation\frmAddUpdatePerson.resx">
+      <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
