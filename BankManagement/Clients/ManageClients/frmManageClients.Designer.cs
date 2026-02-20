@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.cmbIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -44,14 +44,13 @@
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.addNewClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diactivateClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activateClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.addAnAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bottomPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.frmClientManagement = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.btnAddNewClient = new Guna.UI2.WinForms.Guna2Button();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
@@ -62,6 +61,7 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.Silver;
+            this.topPanel.Controls.Add(this.btnAddNewClient);
             this.topPanel.Controls.Add(this.cmbIsActive);
             this.topPanel.Controls.Add(this.cmbFilterBy);
             this.topPanel.Controls.Add(this.txtFilter);
@@ -70,7 +70,7 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1141, 129);
+            this.topPanel.Size = new System.Drawing.Size(1141, 148);
             this.topPanel.TabIndex = 0;
             // 
             // cmbIsActive
@@ -89,7 +89,7 @@
             "All",
             "Yes",
             "No"});
-            this.cmbIsActive.Location = new System.Drawing.Point(270, 96);
+            this.cmbIsActive.Location = new System.Drawing.Point(267, 116);
             this.cmbIsActive.Name = "cmbIsActive";
             this.cmbIsActive.Size = new System.Drawing.Size(131, 26);
             this.cmbIsActive.TabIndex = 4;
@@ -116,7 +116,7 @@
             "Nationality",
             "Gender",
             "Is Active"});
-            this.cmbFilterBy.Location = new System.Drawing.Point(84, 96);
+            this.cmbFilterBy.Location = new System.Drawing.Point(81, 116);
             this.cmbFilterBy.Name = "cmbFilterBy";
             this.cmbFilterBy.Size = new System.Drawing.Size(176, 26);
             this.cmbFilterBy.TabIndex = 3;
@@ -135,7 +135,7 @@
             this.txtFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFilter.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFilter.Location = new System.Drawing.Point(270, 95);
+            this.txtFilter.Location = new System.Drawing.Point(267, 115);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.PlaceholderText = "";
             this.txtFilter.SelectedText = "";
@@ -148,7 +148,7 @@
             // 
             this.lblFindBy.BackColor = System.Drawing.Color.Transparent;
             this.lblFindBy.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFindBy.Location = new System.Drawing.Point(12, 95);
+            this.lblFindBy.Location = new System.Drawing.Point(7, 121);
             this.lblFindBy.Name = "lblFindBy";
             this.lblFindBy.Size = new System.Drawing.Size(68, 21);
             this.lblFindBy.TabIndex = 1;
@@ -192,38 +192,38 @@
             this.dgvClients.AllowUserToOrderColumns = true;
             this.dgvClients.AllowUserToResizeColumns = false;
             this.dgvClients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvClients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvClients.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvClients.ColumnHeadersHeight = 30;
             this.dgvClients.ContextMenuStrip = this.guna2ContextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvClients.Location = new System.Drawing.Point(0, 129);
+            this.dgvClients.Location = new System.Drawing.Point(0, 148);
             this.dgvClients.MultiSelect = false;
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidth = 80;
-            this.dgvClients.Size = new System.Drawing.Size(1141, 614);
+            this.dgvClients.Size = new System.Drawing.Size(1141, 595);
             this.dgvClients.TabIndex = 6;
             this.dgvClients.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvClients.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -253,7 +253,6 @@
             this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewClientToolStripMenuItem,
             this.updateClientToolStripMenuItem,
-            this.findClientToolStripMenuItem,
             this.diactivateClientToolStripMenuItem,
             this.activateClientToolStripMenuItem,
             this.toolStripSeparator1,
@@ -268,40 +267,34 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(181, 164);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(166, 120);
+            this.guna2ContextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.guna2ContextMenuStrip1_Opening);
             // 
             // addNewClientToolStripMenuItem
             // 
             this.addNewClientToolStripMenuItem.Name = "addNewClientToolStripMenuItem";
-            this.addNewClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.addNewClientToolStripMenuItem.Text = "Add new client";
             this.addNewClientToolStripMenuItem.Click += new System.EventHandler(this.addNewClientToolStripMenuItem_Click);
             // 
             // updateClientToolStripMenuItem
             // 
             this.updateClientToolStripMenuItem.Name = "updateClientToolStripMenuItem";
-            this.updateClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.updateClientToolStripMenuItem.Text = "Update client";
             this.updateClientToolStripMenuItem.Click += new System.EventHandler(this.updateClientToolStripMenuItem_Click);
-            // 
-            // findClientToolStripMenuItem
-            // 
-            this.findClientToolStripMenuItem.Name = "findClientToolStripMenuItem";
-            this.findClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.findClientToolStripMenuItem.Text = "Find client";
-            this.findClientToolStripMenuItem.Click += new System.EventHandler(this.findClientToolStripMenuItem_Click);
             // 
             // diactivateClientToolStripMenuItem
             // 
             this.diactivateClientToolStripMenuItem.Name = "diactivateClientToolStripMenuItem";
-            this.diactivateClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.diactivateClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.diactivateClientToolStripMenuItem.Text = "Diactivate client";
             this.diactivateClientToolStripMenuItem.Click += new System.EventHandler(this.diactivateClientToolStripMenuItem_Click);
             // 
             // activateClientToolStripMenuItem
             // 
             this.activateClientToolStripMenuItem.Name = "activateClientToolStripMenuItem";
-            this.activateClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.activateClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.activateClientToolStripMenuItem.Text = "Activate client";
             this.activateClientToolStripMenuItem.Click += new System.EventHandler(this.activateClientToolStripMenuItem_Click);
             // 
@@ -310,13 +303,13 @@
             this.toolStripSeparator1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.toolStripSeparator1.ForeColor = System.Drawing.Color.Navy;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
             // 
             // addAnAccountToolStripMenuItem
             // 
             this.addAnAccountToolStripMenuItem.Name = "addAnAccountToolStripMenuItem";
-            this.addAnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addAnAccountToolStripMenuItem.Text = "Manage Accounts";
+            this.addAnAccountToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.addAnAccountToolStripMenuItem.Text = "Add Account";
             this.addAnAccountToolStripMenuItem.Click += new System.EventHandler(this.addAnAccountToolStripMenuItem_Click);
             // 
             // bottomPanel
@@ -325,24 +318,33 @@
             this.bottomPanel.Controls.Add(this.guna2HtmlLabel1);
             this.bottomPanel.Controls.Add(this.lblNumberOfRecords);
             this.bottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomPanel.Location = new System.Drawing.Point(0, 693);
+            this.bottomPanel.Location = new System.Drawing.Point(0, 649);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(1141, 50);
+            this.bottomPanel.Size = new System.Drawing.Size(1141, 94);
             this.bottomPanel.TabIndex = 7;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // frmClientManagement
+            // btnAddNewClient
             // 
-            this.frmClientManagement.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_VER_POSITIVE;
-            this.frmClientManagement.BorderRadius = 20;
-            this.frmClientManagement.ContainerControl = this;
-            this.frmClientManagement.DockIndicatorTransparencyValue = 0.6D;
-            this.frmClientManagement.HasFormShadow = false;
-            this.frmClientManagement.ShadowColor = System.Drawing.Color.Navy;
-            this.frmClientManagement.TransparentWhileDrag = true;
+            this.btnAddNewClient.BorderRadius = 10;
+            this.btnAddNewClient.BorderThickness = 1;
+            this.btnAddNewClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewClient.FillColor = System.Drawing.Color.White;
+            this.btnAddNewClient.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNewClient.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewClient.Image = global::BankManagement.Properties.Resources.AddPerson_32;
+            this.btnAddNewClient.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAddNewClient.Location = new System.Drawing.Point(1033, 115);
+            this.btnAddNewClient.Name = "btnAddNewClient";
+            this.btnAddNewClient.Size = new System.Drawing.Size(96, 27);
+            this.btnAddNewClient.TabIndex = 37;
+            this.btnAddNewClient.Click += new System.EventHandler(this.btnAddNewClient_Click);
             // 
             // frmManageClients
             // 
@@ -384,12 +386,11 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addNewClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateClientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diactivateClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activateClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addAnAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm frmClientManagement;
         private Guna.UI2.WinForms.Guna2ComboBox cmbIsActive;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewClient;
     }
 }

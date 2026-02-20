@@ -1,13 +1,8 @@
-﻿using BankManagement.Clients.Add_Update_Client;
+﻿using BankManagement.Clients;
+using BankManagement.Clients.Add_Update_Client;
 using BankManagement.Clients.ManageClients;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BankManagement
@@ -28,7 +23,7 @@ namespace BankManagement
             {
                 if (ctrl is Guna.UI2.WinForms.Guna2Button btn)
                 {
-                    if(!(btn.Name == "btnLogout"))
+                    if (!(btn.Name == "btnLogout"))
                         btn.FillColor = SidebarButtonDefaultColor;
                 }
             }
@@ -83,16 +78,14 @@ namespace BankManagement
         {
             frmLogin frm = new frmLogin();
             this.Close();
-            frm.ShowDialog();
-
         }
 
-        private void btnAddNewClient_Click(object sender, EventArgs e)
+        private void btnFindClient_Click(object sender, EventArgs e)
         {
             Guna.UI2.WinForms.Guna2Button clickedButton = (Guna.UI2.WinForms.Guna2Button)sender;
-            
+
             // Pass the form you created for the Client List
-            OpenChildForm(new frmAddUpdateClient(), clickedButton);
+            OpenChildForm(new frmFindClient(), clickedButton);
         }
     }
 }

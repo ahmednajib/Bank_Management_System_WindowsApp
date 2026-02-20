@@ -64,13 +64,23 @@ namespace BLL_BankManagement
                 return null;
         }
 
+        public static clsClient Find(string NationalNumber)
+        {
+            int ClientID = -1;
+            int personID = -1;
+            DateTime DateJoined = DateTime.Now;
+            bool IsActive = false;
+
+            if (clsClientData.GetClientInfoByNationalNumber(NationalNumber, ref ClientID , ref personID, ref DateJoined, ref IsActive))
+            {
+                return new clsClient(ClientID, personID, DateJoined, IsActive);
+            }
+            else
+                return null;
+        }
+
         public bool Save()
         {
-            if (!this.PersonInfo.Save())
-                return false;
-
-            this.PersonID = this.PersonInfo.PersonID;
-
             switch (Mode)
             {
                 case enMode.AddNew:

@@ -1,4 +1,5 @@
-﻿using BLL_BankManagement;
+﻿using BankManagement.Clients.Add_Update_Client;
+using BLL_BankManagement;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -8,7 +9,8 @@ namespace BankManagement.Clients.ManageClients
     public partial class frmManageClients : Form
     {
         private static DataTable _dtAllClients = clsClient.GetAllClients();
-        private void _LoadPeopleData()
+        
+        private void _LoadClientsData()
         {
             _dtAllClients = clsClient.GetAllClients();
             
@@ -16,6 +18,7 @@ namespace BankManagement.Clients.ManageClients
             lblNumberOfRecords.Text = dgvClients.Rows.Count.ToString();
             cmbFilterBy.SelectedIndex = 0;
         }
+
         public frmManageClients()
         {
             InitializeComponent();
@@ -23,7 +26,7 @@ namespace BankManagement.Clients.ManageClients
 
         private void frmManageClients_Load(object sender, EventArgs e)
         {
-            _LoadPeopleData();
+            _LoadClientsData();
 
             dgvClients.Columns[0].HeaderText = "Client ID";
             dgvClients.Columns[0].Width = 100;
@@ -183,32 +186,105 @@ namespace BankManagement.Clients.ManageClients
 
         private void addNewClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Will be written later
+            frmAddUpdateClient addClientForm = new frmAddUpdateClient();
+            addClientForm.ShowDialog();
+            _LoadClientsData(); // Refresh the data after adding a new client
+        }
+
+        private void btnAddNewClient_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateClient addClientForm = new frmAddUpdateClient();
+            addClientForm.ShowDialog();
+            _LoadClientsData(); // Refresh the data after adding a new client
         }
 
         private void updateClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Will be written later
-        }
-
-        private void findClientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // Will be written later
+            int SelectedClientID = Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value);
+            frmAddUpdateClient updateClientForm = new frmAddUpdateClient(SelectedClientID);
+            updateClientForm.ShowDialog();
+            _LoadClientsData(); // Refresh the data after updating the client
         }
 
         private void diactivateClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Will be written later
+            int SelectedClientID = Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value);
+            clsClient client = clsClient.Find(SelectedClientID);
+            
+            if (client == null)
+            {
+                MessageBox.Show("No Client was found with ID = " + SelectedClientID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+            }
+            
+            DialogResult result = MessageBox.Show("Are you sure you want to diactivate client '" + client.PersonInfo.FullName + "'?", "Confirm Diactivation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (result == DialogResult.Yes)
+            {
+                client.IsActive = false;
+
+                if (client.Save())
+                {
+                    MessageBox.Show("Client '" + client.PersonInfo.FullName + "' has been diactivated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _LoadClientsData(); // Refresh the data after diactivation
+                }
+                else
+                {
+                    MessageBox.Show("Failed to diactivate client '" + client.PersonInfo.FullName + "'. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void activateClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Will be written later
+            int SelectedClientID = Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value);
+            clsClient client = clsClient.Find(SelectedClientID);
+            
+            if (client == null)
+            {
+                MessageBox.Show("No Client was found with ID = " + SelectedClientID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+            }
+            
+            DialogResult result = MessageBox.Show("Are you sure you want to activate client '" + client.PersonInfo.FullName + "'?", "Confirm Activation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (result == DialogResult.Yes)
+            {
+                client.IsActive = true;
+
+                if (client.Save())
+                {
+                    MessageBox.Show("Client '" + client.PersonInfo.FullName + "' has been activated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _LoadClientsData(); // Refresh the data after activation
+                }
+                else
+                {
+                    MessageBox.Show("Failed to activate client '" + client.PersonInfo.FullName + "'. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void addAnAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Will be written later
+            // This functionality is not implemented yet.
+        }
+
+        private void guna2ContextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            int SelectedClientID = Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value);
+            clsClient client = clsClient.Find(SelectedClientID);
+
+            if (client == null)
+            {
+                MessageBox.Show("No Client was found with ID = " + SelectedClientID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+            }
+
+            diactivateClientToolStripMenuItem.Enabled = client.IsActive;
+            activateClientToolStripMenuItem.Enabled = !client.IsActive;
         }
     }
 }

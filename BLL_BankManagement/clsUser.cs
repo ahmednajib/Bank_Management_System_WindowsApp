@@ -85,12 +85,6 @@ namespace BLL_BankManagement
 
         public bool Save()
         {
-            // Strategy: Always ensure the Person is saved/updated first
-            if (!this.PersonInfo.Save())
-                return false;
-
-            this.PersonID = this.PersonInfo.PersonID;
-
             switch (Mode)
             {
                 case enMode.AddNew:

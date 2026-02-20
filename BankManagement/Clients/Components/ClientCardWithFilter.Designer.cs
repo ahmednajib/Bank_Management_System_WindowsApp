@@ -1,6 +1,6 @@
-﻿namespace BankManagement.PersonalInformation.Components
+﻿namespace BankManagement.Clients.Components
 {
-    partial class ctrlPersonCardWithFilter
+    partial class ClientCardWithFilter
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,30 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gbFilter = new System.Windows.Forms.GroupBox();
             this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnAddNewPerson = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddNewClient = new Guna.UI2.WinForms.Guna2Button();
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ctrlPersonCard1 = new BankManagement.PersonalInformation.Components.ctrlPersonCard();
+            this.ctrlClientCard1 = new BankManagement.Clients.Components.ctrlClientCard();
             this.gbFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFilter
             // 
             this.gbFilter.Controls.Add(this.txtFilterValue);
             this.gbFilter.Controls.Add(this.cbFilterBy);
-            this.gbFilter.Controls.Add(this.btnAddNewPerson);
+            this.gbFilter.Controls.Add(this.btnAddNewClient);
             this.gbFilter.Controls.Add(this.btnFind);
             this.gbFilter.Controls.Add(this.label1);
-            this.gbFilter.Location = new System.Drawing.Point(3, 3);
+            this.gbFilter.Location = new System.Drawing.Point(14, 4);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(653, 61);
-            this.gbFilter.TabIndex = 2;
+            this.gbFilter.Size = new System.Drawing.Size(650, 73);
+            this.gbFilter.TabIndex = 3;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
             // 
@@ -68,7 +65,7 @@
             this.txtFilterValue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFilterValue.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFilterValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFilterValue.Location = new System.Drawing.Point(250, 26);
+            this.txtFilterValue.Location = new System.Drawing.Point(252, 31);
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.PlaceholderText = "";
             this.txtFilterValue.SelectedText = "";
@@ -90,32 +87,32 @@
             this.cbFilterBy.ItemHeight = 20;
             this.cbFilterBy.Items.AddRange(new object[] {
             "National No",
-            "Person ID"});
-            this.cbFilterBy.Location = new System.Drawing.Point(93, 26);
+            "Client ID"});
+            this.cbFilterBy.Location = new System.Drawing.Point(95, 31);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(141, 26);
             this.cbFilterBy.StartIndex = 0;
             this.cbFilterBy.TabIndex = 37;
             this.cbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cbFilterBy_SelectedIndexChanged);
             // 
-            // btnAddNewPerson
+            // btnAddNewClient
             // 
-            this.btnAddNewPerson.BorderRadius = 10;
-            this.btnAddNewPerson.BorderThickness = 1;
-            this.btnAddNewPerson.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewPerson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewPerson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewPerson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewPerson.FillColor = System.Drawing.Color.White;
-            this.btnAddNewPerson.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddNewPerson.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPerson.Image = global::BankManagement.Properties.Resources.AddPerson_32;
-            this.btnAddNewPerson.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAddNewPerson.Location = new System.Drawing.Point(542, 26);
-            this.btnAddNewPerson.Name = "btnAddNewPerson";
-            this.btnAddNewPerson.Size = new System.Drawing.Size(53, 27);
-            this.btnAddNewPerson.TabIndex = 36;
-            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
+            this.btnAddNewClient.BorderRadius = 10;
+            this.btnAddNewClient.BorderThickness = 1;
+            this.btnAddNewClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewClient.FillColor = System.Drawing.Color.White;
+            this.btnAddNewClient.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddNewClient.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewClient.Image = global::BankManagement.Properties.Resources.AddPerson_32;
+            this.btnAddNewClient.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAddNewClient.Location = new System.Drawing.Point(558, 31);
+            this.btnAddNewClient.Name = "btnAddNewClient";
+            this.btnAddNewClient.Size = new System.Drawing.Size(53, 27);
+            this.btnAddNewClient.TabIndex = 36;
+            this.btnAddNewClient.Click += new System.EventHandler(this.btnAddNewClient_Click);
             // 
             // btnFind
             // 
@@ -129,7 +126,7 @@
             this.btnFind.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnFind.ForeColor = System.Drawing.Color.White;
             this.btnFind.Image = global::BankManagement.Properties.Resources.SearchPerson;
-            this.btnFind.Location = new System.Drawing.Point(473, 26);
+            this.btnFind.Location = new System.Drawing.Point(482, 31);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(53, 27);
             this.btnFind.TabIndex = 35;
@@ -139,50 +136,42 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 30);
+            this.label1.Location = new System.Drawing.Point(13, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 30;
             this.label1.Text = "Find By:";
             // 
-            // errorProvider1
+            // ctrlClientCard1
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.ctrlClientCard1.Location = new System.Drawing.Point(4, 80);
+            this.ctrlClientCard1.Name = "ctrlClientCard1";
+            this.ctrlClientCard1.Size = new System.Drawing.Size(665, 310);
+            this.ctrlClientCard1.TabIndex = 4;
             // 
-            // ctrlPersonCard1
-            // 
-            this.ctrlPersonCard1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 69);
-            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(669, 233);
-            this.ctrlPersonCard1.TabIndex = 3;
-            // 
-            // ctrlPersonCardWithFilter
+            // ClientCardWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.Controls.Add(this.ctrlPersonCard1);
+            this.Controls.Add(this.ctrlClientCard1);
             this.Controls.Add(this.gbFilter);
-            this.Name = "ctrlPersonCardWithFilter";
-            this.Size = new System.Drawing.Size(660, 303);
-            this.Load += new System.EventHandler(this.ctrlPersonCardWithFilter_Load);
+            this.Name = "ClientCardWithFilter";
+            this.Size = new System.Drawing.Size(669, 396);
+            this.Load += new System.EventHandler(this.ClientCardWithFilter_Load);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private System.Windows.Forms.GroupBox gbFilter;
-        private System.Windows.Forms.Label label1;
-        private ctrlPersonCard ctrlPersonCard1;
-        private Guna.UI2.WinForms.Guna2Button btnFind;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewPerson;
-        private Guna.UI2.WinForms.Guna2ComboBox cbFilterBy;
         private Guna.UI2.WinForms.Guna2TextBox txtFilterValue;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbFilterBy;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewClient;
+        private Guna.UI2.WinForms.Guna2Button btnFind;
+        private System.Windows.Forms.Label label1;
+        private ctrlClientCard ctrlClientCard1;
     }
 }

@@ -128,7 +128,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(10, 65);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(743, 250);
+            this.groupBox1.Size = new System.Drawing.Size(743, 278);
             this.groupBox1.TabIndex = 89;
             this.groupBox1.TabStop = false;
             // 
@@ -140,11 +140,11 @@
             this.dtpDateOfBirth.FillColor = System.Drawing.Color.White;
             this.dtpDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(416, 52);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(416, 57);
             this.dtpDateOfBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDateOfBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(159, 30);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(171, 30);
             this.dtpDateOfBirth.TabIndex = 115;
             this.dtpDateOfBirth.Value = new System.DateTime(2026, 2, 17, 19, 12, 48, 459);
             // 
@@ -170,7 +170,7 @@
             "Is Active"});
             this.cbCountries.Location = new System.Drawing.Point(417, 126);
             this.cbCountries.Name = "cbCountries";
-            this.cbCountries.Size = new System.Drawing.Size(158, 26);
+            this.cbCountries.Size = new System.Drawing.Size(170, 26);
             this.cbCountries.TabIndex = 114;
             // 
             // txtAddress
@@ -186,13 +186,13 @@
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(111, 161);
+            this.txtAddress.Location = new System.Drawing.Point(111, 177);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtAddress.PlaceholderText = "Address";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(443, 60);
+            this.txtAddress.Size = new System.Drawing.Size(466, 60);
             this.txtAddress.TabIndex = 113;
             this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
@@ -214,7 +214,7 @@
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtEmail.PlaceholderText = "example@gmail.com";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(142, 30);
+            this.txtEmail.Size = new System.Drawing.Size(157, 30);
             this.txtEmail.TabIndex = 112;
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
@@ -236,7 +236,7 @@
             this.txtPhone.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtPhone.PlaceholderText = "Phone Number";
             this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(158, 30);
+            this.txtPhone.Size = new System.Drawing.Size(170, 30);
             this.txtPhone.TabIndex = 111;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
@@ -254,12 +254,12 @@
             this.txtNationalNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNationalNo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNationalNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNationalNo.Location = new System.Drawing.Point(111, 51);
+            this.txtNationalNo.Location = new System.Drawing.Point(111, 56);
             this.txtNationalNo.Name = "txtNationalNo";
             this.txtNationalNo.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtNationalNo.PlaceholderText = "National No";
             this.txtNationalNo.SelectedText = "";
-            this.txtNationalNo.Size = new System.Drawing.Size(142, 30);
+            this.txtNationalNo.Size = new System.Drawing.Size(157, 30);
             this.txtNationalNo.TabIndex = 110;
             this.txtNationalNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalNo_Validating);
             // 
@@ -276,7 +276,7 @@
             this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Location = new System.Drawing.Point(584, 16);
+            this.txtLastName.Location = new System.Drawing.Point(582, 16);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtLastName.PlaceholderText = "Last Name";
@@ -299,7 +299,7 @@
             this.txtThirdName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThirdName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtThirdName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThirdName.Location = new System.Drawing.Point(421, 16);
+            this.txtThirdName.Location = new System.Drawing.Point(423, 16);
             this.txtThirdName.Name = "txtThirdName";
             this.txtThirdName.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtThirdName.PlaceholderText = "Third Name";
@@ -321,7 +321,7 @@
             this.txtSecondName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSecondName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSecondName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSecondName.Location = new System.Drawing.Point(264, 16);
+            this.txtSecondName.Location = new System.Drawing.Point(273, 16);
             this.txtSecondName.Name = "txtSecondName";
             this.txtSecondName.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtSecondName.PlaceholderText = "Second Name";
@@ -349,7 +349,7 @@
             this.txtFirstName.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtFirstName.PlaceholderText = "First Name";
             this.txtFirstName.SelectedText = "";
-            this.txtFirstName.Size = new System.Drawing.Size(145, 30);
+            this.txtFirstName.Size = new System.Drawing.Size(156, 30);
             this.txtFirstName.TabIndex = 106;
             this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
             this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
@@ -424,7 +424,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::BankManagement.Properties.Resources.Calendar_32;
-            this.pictureBox6.Location = new System.Drawing.Point(386, 54);
+            this.pictureBox6.Location = new System.Drawing.Point(386, 59);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(24, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -434,7 +434,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::BankManagement.Properties.Resources.Address_32;
-            this.pictureBox5.Location = new System.Drawing.Point(81, 161);
+            this.pictureBox5.Location = new System.Drawing.Point(81, 177);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 25);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -464,7 +464,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::BankManagement.Properties.Resources.Number_32;
-            this.pictureBox3.Location = new System.Drawing.Point(81, 53);
+            this.pictureBox3.Location = new System.Drawing.Point(81, 58);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -526,7 +526,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(305, 59);
+            this.label2.Location = new System.Drawing.Point(305, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 62;
@@ -536,7 +536,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 164);
+            this.label7.Location = new System.Drawing.Point(10, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 16);
             this.label7.TabIndex = 61;
@@ -566,7 +566,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 58);
+            this.label4.Location = new System.Drawing.Point(10, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 16);
             this.label4.TabIndex = 58;
@@ -604,7 +604,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnSave.Location = new System.Drawing.Point(425, 323);
+            this.btnSave.Location = new System.Drawing.Point(425, 357);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(167, 38);
             this.btnSave.TabIndex = 92;
@@ -625,7 +625,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnClose.Location = new System.Drawing.Point(220, 323);
+            this.btnClose.Location = new System.Drawing.Point(220, 357);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(167, 38);
             this.btnClose.TabIndex = 93;
@@ -636,7 +636,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 371);
+            this.ClientSize = new System.Drawing.Size(762, 409);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblTitle);

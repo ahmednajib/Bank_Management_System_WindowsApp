@@ -52,11 +52,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clients\Add&amp;Update Client\frmAddUpdateClient.cs">
+    <Compile Include="Clients\frm FindClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clients\Add&amp;Update Client\frmAddUpdateClient.Designer.cs">
+    <Compile Include="Clients\frm FindClient.Designer.cs">
+      <DependentUpon>frm FindClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\frmAddUpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\frmAddUpdateClient.Designer.cs">
       <DependentUpon>frmAddUpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\Components\ClientCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clients\Components\ClientCardWithFilter.Designer.cs">
+      <DependentUpon>ClientCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\Components\ctrlClientCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clients\Components\ctrlClientCard.Designer.cs">
+      <DependentUpon>ctrlClientCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Clients\ManageClients\frmManageClients.cs">
       <SubType>Form</SubType>
@@ -102,8 +120,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Clients\Add&amp;Update Client\frmAddUpdateClient.resx">
+    <EmbeddedResource Include="Clients\frm FindClient.resx">
+      <DependentUpon>frm FindClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\frmAddUpdateClient.resx">
       <DependentUpon>frmAddUpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\Components\ClientCardWithFilter.resx">
+      <DependentUpon>ClientCardWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients\Components\ctrlClientCard.resx">
+      <DependentUpon>ctrlClientCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clients\ManageClients\frmManageClients.resx">
       <DependentUpon>frmManageClients.cs</DependentUpon>
@@ -196,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\AddPerson 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPicture.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -35,6 +35,41 @@ namespace DAL_BankManagement
             return isFound;
         }
 
+        public static bool GetClientInfoByNationalNumber(string NationalNo, ref int ClientID, ref int PersonID, ref DateTime DateJoined, ref bool IsActive)
+        {
+            bool isFound = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            using (SqlCommand command = new SqlCommand("SP_GetClientInfoByNationalNo", connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@NationalNo", NationalNo);
+
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            ClientID = (int)reader["ClientID"];
+                            PersonID = (int)reader["PersonID"];
+                            DateJoined = (DateTime)reader["DateJoined"];
+                            IsActive = (bool)reader["IsActive"];
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Using your existing exception logger
+                    clsLogger.ExceptionLogger(ex, EventLogEntryType.Error);
+                }
+            }
+
+            return isFound;
+        }
+
         public static int AddNewClient(int PersonID, DateTime DateJoined, bool IsActive)
         {
             int ClientID = -1;

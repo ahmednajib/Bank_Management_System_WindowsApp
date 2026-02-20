@@ -30,14 +30,11 @@
         {
             this.pnlSideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCurrencyExchange = new Guna.UI2.WinForms.Guna2Button();
             this.btnLoginHistory = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCurrencyExchange = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnTransactions = new Guna.UI2.WinForms.Guna2Button();
             this.btnFindClient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdateClient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDeleteClient = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddNewClient = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnManageClients = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
@@ -50,14 +47,11 @@
             // pnlSideBar
             // 
             this.pnlSideBar.Controls.Add(this.btnLogout);
-            this.pnlSideBar.Controls.Add(this.btnCurrencyExchange);
             this.pnlSideBar.Controls.Add(this.btnLoginHistory);
+            this.pnlSideBar.Controls.Add(this.btnCurrencyExchange);
             this.pnlSideBar.Controls.Add(this.btnManageUsers);
             this.pnlSideBar.Controls.Add(this.btnTransactions);
             this.pnlSideBar.Controls.Add(this.btnFindClient);
-            this.pnlSideBar.Controls.Add(this.btnUpdateClient);
-            this.pnlSideBar.Controls.Add(this.btnDeleteClient);
-            this.pnlSideBar.Controls.Add(this.btnAddNewClient);
             this.pnlSideBar.Controls.Add(this.guna2Separator2);
             this.pnlSideBar.Controls.Add(this.btnManageClients);
             this.pnlSideBar.Controls.Add(this.guna2Separator1);
@@ -66,7 +60,7 @@
             this.pnlSideBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.pnlSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(200, 788);
+            this.pnlSideBar.Size = new System.Drawing.Size(233, 788);
             this.pnlSideBar.TabIndex = 0;
             // 
             // btnLogout
@@ -83,66 +77,78 @@
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnLogout.Location = new System.Drawing.Point(10, 714);
+            this.btnLogout.Location = new System.Drawing.Point(26, 693);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(180, 45);
             this.btnLogout.TabIndex = 14;
             this.btnLogout.Text = "Logout";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnCurrencyExchange
-            // 
-            this.btnCurrencyExchange.BackColor = System.Drawing.Color.Transparent;
-            this.btnCurrencyExchange.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-            this.btnCurrencyExchange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCurrencyExchange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCurrencyExchange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCurrencyExchange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCurrencyExchange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnCurrencyExchange.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCurrencyExchange.ForeColor = System.Drawing.Color.White;
-            this.btnCurrencyExchange.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnCurrencyExchange.Location = new System.Drawing.Point(10, 643);
-            this.btnCurrencyExchange.Name = "btnCurrencyExchange";
-            this.btnCurrencyExchange.Size = new System.Drawing.Size(180, 45);
-            this.btnCurrencyExchange.TabIndex = 13;
-            this.btnCurrencyExchange.Text = "Currency Exchange";
-            this.btnCurrencyExchange.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // btnLoginHistory
             // 
             this.btnLoginHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoginHistory.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoginHistory.BorderRadius = 15;
             this.btnLoginHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnLoginHistory.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoginHistory.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.btnLoginHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLoginHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLoginHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLoginHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLoginHistory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnLoginHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginHistory.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginHistory.ForeColor = System.Drawing.Color.White;
             this.btnLoginHistory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnLoginHistory.Location = new System.Drawing.Point(10, 584);
+            this.btnLoginHistory.Location = new System.Drawing.Point(8, 496);
             this.btnLoginHistory.Name = "btnLoginHistory";
-            this.btnLoginHistory.Size = new System.Drawing.Size(180, 45);
-            this.btnLoginHistory.TabIndex = 12;
+            this.btnLoginHistory.Size = new System.Drawing.Size(223, 45);
+            this.btnLoginHistory.TabIndex = 13;
             this.btnLoginHistory.Text = "Login History";
             this.btnLoginHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnCurrencyExchange
+            // 
+            this.btnCurrencyExchange.BackColor = System.Drawing.Color.Transparent;
+            this.btnCurrencyExchange.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCurrencyExchange.BorderRadius = 15;
+            this.btnCurrencyExchange.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnCurrencyExchange.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCurrencyExchange.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.btnCurrencyExchange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCurrencyExchange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCurrencyExchange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCurrencyExchange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCurrencyExchange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnCurrencyExchange.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCurrencyExchange.ForeColor = System.Drawing.Color.White;
+            this.btnCurrencyExchange.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnCurrencyExchange.Location = new System.Drawing.Point(8, 431);
+            this.btnCurrencyExchange.Name = "btnCurrencyExchange";
+            this.btnCurrencyExchange.Size = new System.Drawing.Size(223, 45);
+            this.btnCurrencyExchange.TabIndex = 12;
+            this.btnCurrencyExchange.Text = "Currency Exchange";
+            this.btnCurrencyExchange.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnManageUsers
             // 
             this.btnManageUsers.BackColor = System.Drawing.Color.Transparent;
+            this.btnManageUsers.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageUsers.BorderRadius = 15;
             this.btnManageUsers.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnManageUsers.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageUsers.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.btnManageUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnManageUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnManageUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnManageUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnManageUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnManageUsers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageUsers.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageUsers.ForeColor = System.Drawing.Color.White;
             this.btnManageUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnManageUsers.Location = new System.Drawing.Point(10, 525);
+            this.btnManageUsers.Location = new System.Drawing.Point(8, 366);
             this.btnManageUsers.Name = "btnManageUsers";
-            this.btnManageUsers.Size = new System.Drawing.Size(180, 45);
+            this.btnManageUsers.Size = new System.Drawing.Size(223, 45);
             this.btnManageUsers.TabIndex = 11;
             this.btnManageUsers.Text = "Manage Users";
             this.btnManageUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -150,18 +156,22 @@
             // btnTransactions
             // 
             this.btnTransactions.BackColor = System.Drawing.Color.Transparent;
+            this.btnTransactions.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTransactions.BorderRadius = 15;
             this.btnTransactions.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnTransactions.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTransactions.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.btnTransactions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTransactions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTransactions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTransactions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTransactions.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnTransactions.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransactions.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransactions.ForeColor = System.Drawing.Color.White;
             this.btnTransactions.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnTransactions.Location = new System.Drawing.Point(10, 466);
+            this.btnTransactions.Location = new System.Drawing.Point(8, 301);
             this.btnTransactions.Name = "btnTransactions";
-            this.btnTransactions.Size = new System.Drawing.Size(180, 45);
+            this.btnTransactions.Size = new System.Drawing.Size(223, 45);
             this.btnTransactions.TabIndex = 10;
             this.btnTransactions.Text = "Transactions";
             this.btnTransactions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -169,106 +179,57 @@
             // btnFindClient
             // 
             this.btnFindClient.BackColor = System.Drawing.Color.Transparent;
+            this.btnFindClient.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindClient.BorderRadius = 15;
             this.btnFindClient.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnFindClient.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindClient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.btnFindClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnFindClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnFindClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnFindClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnFindClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnFindClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindClient.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindClient.ForeColor = System.Drawing.Color.White;
             this.btnFindClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnFindClient.Location = new System.Drawing.Point(10, 407);
+            this.btnFindClient.Location = new System.Drawing.Point(8, 236);
             this.btnFindClient.Name = "btnFindClient";
-            this.btnFindClient.Size = new System.Drawing.Size(180, 45);
+            this.btnFindClient.Size = new System.Drawing.Size(223, 45);
             this.btnFindClient.TabIndex = 9;
             this.btnFindClient.Text = "Find Client";
             this.btnFindClient.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnUpdateClient
-            // 
-            this.btnUpdateClient.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdateClient.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-            this.btnUpdateClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnUpdateClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateClient.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnUpdateClient.Location = new System.Drawing.Point(10, 348);
-            this.btnUpdateClient.Name = "btnUpdateClient";
-            this.btnUpdateClient.Size = new System.Drawing.Size(180, 45);
-            this.btnUpdateClient.TabIndex = 8;
-            this.btnUpdateClient.Text = "Update Client";
-            this.btnUpdateClient.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnDeleteClient
-            // 
-            this.btnDeleteClient.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteClient.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-            this.btnDeleteClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeleteClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeleteClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnDeleteClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteClient.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnDeleteClient.Location = new System.Drawing.Point(10, 289);
-            this.btnDeleteClient.Name = "btnDeleteClient";
-            this.btnDeleteClient.Size = new System.Drawing.Size(180, 45);
-            this.btnDeleteClient.TabIndex = 7;
-            this.btnDeleteClient.Text = "Delete Client";
-            this.btnDeleteClient.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnAddNewClient
-            // 
-            this.btnAddNewClient.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddNewClient.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-            this.btnAddNewClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnAddNewClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewClient.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnAddNewClient.Location = new System.Drawing.Point(10, 230);
-            this.btnAddNewClient.Name = "btnAddNewClient";
-            this.btnAddNewClient.Size = new System.Drawing.Size(180, 45);
-            this.btnAddNewClient.TabIndex = 6;
-            this.btnAddNewClient.Text = "Add New Client";
-            this.btnAddNewClient.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddNewClient.Click += new System.EventHandler(this.btnAddNewClient_Click);
+            this.btnFindClient.Click += new System.EventHandler(this.btnFindClient_Click);
             // 
             // guna2Separator2
             // 
             this.guna2Separator2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator2.FillColor = System.Drawing.Color.RoyalBlue;
             this.guna2Separator2.FillThickness = 2;
-            this.guna2Separator2.Location = new System.Drawing.Point(0, 696);
+            this.guna2Separator2.Location = new System.Drawing.Point(0, 664);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator2.Size = new System.Drawing.Size(233, 10);
             this.guna2Separator2.TabIndex = 5;
             this.guna2Separator2.UseTransparentBackground = true;
             // 
             // btnManageClients
             // 
             this.btnManageClients.BackColor = System.Drawing.Color.Transparent;
+            this.btnManageClients.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageClients.BorderRadius = 15;
             this.btnManageClients.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnManageClients.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageClients.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.btnManageClients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnManageClients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnManageClients.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnManageClients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnManageClients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnManageClients.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageClients.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageClients.ForeColor = System.Drawing.Color.White;
             this.btnManageClients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnManageClients.Location = new System.Drawing.Point(10, 171);
+            this.btnManageClients.Location = new System.Drawing.Point(8, 171);
             this.btnManageClients.Name = "btnManageClients";
-            this.btnManageClients.Size = new System.Drawing.Size(180, 45);
+            this.btnManageClients.Size = new System.Drawing.Size(223, 45);
             this.btnManageClients.TabIndex = 4;
             this.btnManageClients.Text = "Manage Clients";
             this.btnManageClients.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -281,7 +242,7 @@
             this.guna2Separator1.FillThickness = 2;
             this.guna2Separator1.Location = new System.Drawing.Point(0, 142);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(233, 10);
             this.guna2Separator1.TabIndex = 3;
             this.guna2Separator1.UseTransparentBackground = true;
             // 
@@ -290,7 +251,7 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::BankManagement.Properties.Resources.BankLogo;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(42, 3);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(42, 13);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(120, 120);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -302,10 +263,11 @@
             // 
             this.pnlMainContainer.BackColor = System.Drawing.Color.LightGray;
             this.pnlMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainContainer.Location = new System.Drawing.Point(200, 0);
+            this.pnlMainContainer.Location = new System.Drawing.Point(233, 0);
+            this.pnlMainContainer.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainContainer.Name = "pnlMainContainer";
-            this.pnlMainContainer.Padding = new System.Windows.Forms.Padding(15, 15, 30, 30);
-            this.pnlMainContainer.Size = new System.Drawing.Size(1186, 788);
+            this.pnlMainContainer.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlMainContainer.Size = new System.Drawing.Size(1153, 788);
             this.pnlMainContainer.TabIndex = 1;
             // 
             // frmDashboard
@@ -334,14 +296,11 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Button btnManageClients;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2Button btnCurrencyExchange;
         private Guna.UI2.WinForms.Guna2Button btnLoginHistory;
+        private Guna.UI2.WinForms.Guna2Button btnCurrencyExchange;
         private Guna.UI2.WinForms.Guna2Button btnManageUsers;
         private Guna.UI2.WinForms.Guna2Button btnTransactions;
         private Guna.UI2.WinForms.Guna2Button btnFindClient;
-        private Guna.UI2.WinForms.Guna2Button btnUpdateClient;
-        private Guna.UI2.WinForms.Guna2Button btnDeleteClient;
-        private Guna.UI2.WinForms.Guna2Button btnAddNewClient;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
     }
 }
