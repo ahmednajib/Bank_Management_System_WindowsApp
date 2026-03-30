@@ -1,6 +1,7 @@
 ﻿using BankManagement.Clients;
 using BankManagement.Clients.Add_Update_Client;
 using BankManagement.Clients.ManageClients;
+using Classes;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -62,9 +63,14 @@ namespace BankManagement
             childForm.Show();
         }
 
-        public frmDashboard()
+
+        frmLogin _LoginForm;
+        private bool isLoggingOut = false;
+
+        public frmDashboard(frmLogin LoginForm)
         {
             InitializeComponent();
+            _LoginForm = LoginForm;
         }
 
         private void btnManageClients_Click(object sender, EventArgs e)
@@ -76,7 +82,9 @@ namespace BankManagement
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            frmLogin frm = new frmLogin();
+            isLoggingOut = true;
+            clsGlobal.CurrentUser = null;
+            _LoginForm.Show();
             this.Close();
         }
 
@@ -86,6 +94,16 @@ namespace BankManagement
 
             // Pass the form you created for the Client List
             OpenChildForm(new frmFindClient(), clickedButton);
+        }
+
+        private void frmDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!isLoggingOut)
+            {
+                // If the form is closed without logging out, we exit the application.
+                // This is to ensure that the application does not remain running in the background.
+                Application.Exit();
+            }
         }
     }
 }

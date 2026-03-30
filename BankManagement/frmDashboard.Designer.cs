@@ -282,6 +282,7 @@
             this.Name = "frmDashboard";
             this.ShowIcon = false;
             this.Text = "Ahmed Bank";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDashboard_FormClosed);
             this.pnlSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);

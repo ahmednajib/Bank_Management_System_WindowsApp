@@ -2,12 +2,13 @@
 using Microsoft.Win32;
 using System;
 using System.Diagnostics;
+using BLL_BankManagement;
 
 namespace Classes
 {
     public static class clsGlobal
     {
-        //public static clsUser CurrentUser;
+        public static clsUser CurrentUser;
 
         public static bool RememberUsernameAndPassword(string Username, string Password)
         {
