@@ -48,7 +48,7 @@ namespace BLL_BankManagement
             this.ReceiverAccountID = receiverAccountID;
             //this.ReceiverAccountInfo = clsAccount.Find(receiverAccountID);
             this.CreatedByUserID = createdByUserID;
-            this.CreatedByUserInfo = clsUser.FindByUserID(createdByUserID);
+            this.CreatedByUserInfo = clsUser.Find(createdByUserID);
 
             Mode = enMode.Update;
         }

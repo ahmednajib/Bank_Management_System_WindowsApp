@@ -289,7 +289,7 @@
             this.diactivateClientToolStripMenuItem.Name = "diactivateClientToolStripMenuItem";
             this.diactivateClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.diactivateClientToolStripMenuItem.Text = "Diactivate client";
-            this.diactivateClientToolStripMenuItem.Click += new System.EventHandler(this.diactivateClientToolStripMenuItem_Click);
+            this.diactivateClientToolStripMenuItem.Click += new System.EventHandler(this.deactivateClientToolStripMenuItem_Click);
             // 
             // activateClientToolStripMenuItem
             // 

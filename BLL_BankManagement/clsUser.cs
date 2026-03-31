@@ -22,11 +22,11 @@ namespace BLL_BankManagement
 
         public clsUser()
         {
-            this.UserID = -1;
-            this.UserName = "";
-            this.Password = "";
+            this.UserID    = -1;
+            this.UserName  = "";
+            this.Password  = "";
             this.PersonInfo = new clsPerson();
-            this.IsActive = true;
+            this.IsActive  = true;
 
             Mode = enMode.AddNew;
         }
@@ -57,7 +57,7 @@ namespace BLL_BankManagement
             return clsUserData.UpdateUser(this.UserID, this.PersonID, this.UserName, this.Password, this.IsActive);
         }
 
-        public static clsUser FindByUserID(int UserID)
+        public static clsUser Find(int UserID)
         {
             int personID = -1;
             string userName = "", password = "";
@@ -65,6 +65,17 @@ namespace BLL_BankManagement
 
             return clsUserData.GetUserInfoByUserID(UserID, ref personID, ref userName, ref password, ref isActive)
                 ? new clsUser(UserID, personID, userName, password, isActive)
+                : null;
+        }
+
+        public static clsUser FindByPersonID(int PersonID)
+        {
+            int UserID = -1;
+            string userName = "", password = "";
+            bool isActive = false;
+
+            return clsUserData.GetUserInfoByPersonID(PersonID,  ref UserID, ref userName, ref password, ref isActive)
+                ? new clsUser(UserID, PersonID, userName, password, isActive)
                 : null;
         }
 
@@ -122,7 +133,8 @@ namespace BLL_BankManagement
         /// </summary>
         public static bool HardDeleteUser(int UserID)
         {
-            clsUser User = clsUser.FindByUserID(UserID);
+            clsUser User = clsUser.Find(UserID);
+
             if (User != null)
             {
                 // Delete User first to satisfy Foreign Key constraints

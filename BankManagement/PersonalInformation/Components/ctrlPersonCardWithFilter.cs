@@ -98,7 +98,7 @@ namespace BankManagement.PersonalInformation.Components
             }
 
             // Check if the person was found
-            if (OnPersonSelected != null && FilterEnabled)
+            if (OnPersonSelected != null && FilterEnabled && ctrlPersonCard1.PersonID != -1)
                 // Raise the event with a parameter
                 OnPersonSelected(ctrlPersonCard1.PersonID);
         }
@@ -118,6 +118,7 @@ namespace BankManagement.PersonalInformation.Components
                 MessageBox.Show("Please fill in the field", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             FindNow();
         }
 

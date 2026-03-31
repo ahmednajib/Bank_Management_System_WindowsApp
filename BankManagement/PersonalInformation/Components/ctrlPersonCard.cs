@@ -69,6 +69,7 @@ namespace BankManagement.PersonalInformation.Components
 
         public void LoadPersonInformation(int PersonID)
         {
+            _PersonID = -1;
             _Person = clsPerson.Find(PersonID);
 
             LoadDefaultInfo();
@@ -77,6 +78,7 @@ namespace BankManagement.PersonalInformation.Components
                 MessageBox.Show($"Person with ID={PersonID} was not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             _LoadPersonInfo();
         }
 
@@ -105,6 +107,7 @@ namespace BankManagement.PersonalInformation.Components
             lblDateOfBirth.Text = _Person.DateOfBirth.ToString("dd/MM/yyyy");
             lblPhone.Text = _Person.Phone;
             lblCountry.Text = _Person.CountryInfo.CountryName;
+
             LoadPersonImage();
         }
 

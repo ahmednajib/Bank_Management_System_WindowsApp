@@ -31,11 +31,11 @@
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ctrlPersonCardWithFilter1 = new BankManagement.PersonalInformation.Components.ctrlPersonCardWithFilter();
             this.gbActiveStatus = new System.Windows.Forms.GroupBox();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.rbInActive = new System.Windows.Forms.RadioButton();
             this.rbActive = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.gbActiveStatus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(200, 12);
+            this.lblTitle.Location = new System.Drawing.Point(204, 2);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(273, 44);
             this.lblTitle.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             this.ctrlPersonCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ctrlPersonCardWithFilter1.FilterEnabled = true;
-            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(5, 62);
+            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(1, 48);
             this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
             this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
             this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(663, 306);
@@ -65,12 +65,46 @@
             this.gbActiveStatus.Controls.Add(this.rbInActive);
             this.gbActiveStatus.Controls.Add(this.rbActive);
             this.gbActiveStatus.Controls.Add(this.label5);
-            this.gbActiveStatus.Location = new System.Drawing.Point(12, 365);
+            this.gbActiveStatus.Location = new System.Drawing.Point(10, 355);
             this.gbActiveStatus.Name = "gbActiveStatus";
-            this.gbActiveStatus.Size = new System.Drawing.Size(647, 45);
+            this.gbActiveStatus.Size = new System.Drawing.Size(647, 48);
             this.gbActiveStatus.TabIndex = 2;
             this.gbActiveStatus.TabStop = false;
             this.gbActiveStatus.Text = "Active Status";
+            // 
+            // rbInActive
+            // 
+            this.rbInActive.AutoSize = true;
+            this.rbInActive.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbInActive.Location = new System.Drawing.Point(145, 19);
+            this.rbInActive.Name = "rbInActive";
+            this.rbInActive.Size = new System.Drawing.Size(39, 17);
+            this.rbInActive.TabIndex = 100;
+            this.rbInActive.Text = "No";
+            this.rbInActive.UseVisualStyleBackColor = true;
+            // 
+            // rbActive
+            // 
+            this.rbActive.AutoSize = true;
+            this.rbActive.Checked = true;
+            this.rbActive.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbActive.Location = new System.Drawing.Point(80, 19);
+            this.rbActive.Name = "rbActive";
+            this.rbActive.Size = new System.Drawing.Size(45, 17);
+            this.rbActive.TabIndex = 99;
+            this.rbActive.TabStop = true;
+            this.rbActive.Text = "Yes";
+            this.rbActive.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 16);
+            this.label5.TabIndex = 97;
+            this.label5.Text = "Is Active:";
             // 
             // btnClose
             // 
@@ -86,7 +120,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnClose.Location = new System.Drawing.Point(151, 426);
+            this.btnClose.Location = new System.Drawing.Point(155, 411);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(167, 38);
             this.btnClose.TabIndex = 95;
@@ -107,53 +141,19 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnSave.Location = new System.Drawing.Point(356, 426);
+            this.btnSave.Location = new System.Drawing.Point(360, 411);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(167, 38);
             this.btnSave.TabIndex = 94;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // rbInActive
-            // 
-            this.rbInActive.AutoSize = true;
-            this.rbInActive.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbInActive.Location = new System.Drawing.Point(145, 18);
-            this.rbInActive.Name = "rbInActive";
-            this.rbInActive.Size = new System.Drawing.Size(39, 17);
-            this.rbInActive.TabIndex = 100;
-            this.rbInActive.Text = "No";
-            this.rbInActive.UseVisualStyleBackColor = true;
-            // 
-            // rbActive
-            // 
-            this.rbActive.AutoSize = true;
-            this.rbActive.Checked = true;
-            this.rbActive.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbActive.Location = new System.Drawing.Point(80, 18);
-            this.rbActive.Name = "rbActive";
-            this.rbActive.Size = new System.Drawing.Size(45, 17);
-            this.rbActive.TabIndex = 99;
-            this.rbActive.TabStop = true;
-            this.rbActive.Text = "Yes";
-            this.rbActive.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 16);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "Is Active:";
-            // 
             // frmAddUpdateClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(666, 474);
+            this.ClientSize = new System.Drawing.Size(666, 455);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.gbActiveStatus);

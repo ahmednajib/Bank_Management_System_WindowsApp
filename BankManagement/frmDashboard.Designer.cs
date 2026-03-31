@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlSideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLoginHistory = new Guna.UI2.WinForms.Guna2Button();
             this.btnCurrencyExchange = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnTransactions = new Guna.UI2.WinForms.Guna2Button();
@@ -40,14 +40,16 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlMainContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnWithdraw = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSideBar
             // 
+            this.pnlSideBar.Controls.Add(this.btnWithdraw);
+            this.pnlSideBar.Controls.Add(this.guna2Button1);
             this.pnlSideBar.Controls.Add(this.btnLogout);
-            this.pnlSideBar.Controls.Add(this.btnLoginHistory);
             this.pnlSideBar.Controls.Add(this.btnCurrencyExchange);
             this.pnlSideBar.Controls.Add(this.btnManageUsers);
             this.pnlSideBar.Controls.Add(this.btnTransactions);
@@ -62,6 +64,29 @@
             this.pnlSideBar.Name = "pnlSideBar";
             this.pnlSideBar.Size = new System.Drawing.Size(233, 788);
             this.pnlSideBar.TabIndex = 0;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.guna2Button1.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.guna2Button1.Location = new System.Drawing.Point(8, 348);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(223, 45);
+            this.guna2Button1.TabIndex = 15;
+            this.guna2Button1.Text = "Deposite";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnLogout
             // 
@@ -84,29 +109,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnLoginHistory
-            // 
-            this.btnLoginHistory.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoginHistory.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoginHistory.BorderRadius = 15;
-            this.btnLoginHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
-            this.btnLoginHistory.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoginHistory.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.btnLoginHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoginHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoginHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoginHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoginHistory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnLoginHistory.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginHistory.ForeColor = System.Drawing.Color.White;
-            this.btnLoginHistory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnLoginHistory.Location = new System.Drawing.Point(8, 496);
-            this.btnLoginHistory.Name = "btnLoginHistory";
-            this.btnLoginHistory.Size = new System.Drawing.Size(223, 45);
-            this.btnLoginHistory.TabIndex = 13;
-            this.btnLoginHistory.Text = "Login History";
-            this.btnLoginHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // btnCurrencyExchange
             // 
             this.btnCurrencyExchange.BackColor = System.Drawing.Color.Transparent;
@@ -123,7 +125,7 @@
             this.btnCurrencyExchange.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCurrencyExchange.ForeColor = System.Drawing.Color.White;
             this.btnCurrencyExchange.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnCurrencyExchange.Location = new System.Drawing.Point(8, 431);
+            this.btnCurrencyExchange.Location = new System.Drawing.Point(8, 525);
             this.btnCurrencyExchange.Name = "btnCurrencyExchange";
             this.btnCurrencyExchange.Size = new System.Drawing.Size(223, 45);
             this.btnCurrencyExchange.TabIndex = 12;
@@ -146,12 +148,13 @@
             this.btnManageUsers.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageUsers.ForeColor = System.Drawing.Color.White;
             this.btnManageUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnManageUsers.Location = new System.Drawing.Point(8, 366);
+            this.btnManageUsers.Location = new System.Drawing.Point(8, 466);
             this.btnManageUsers.Name = "btnManageUsers";
             this.btnManageUsers.Size = new System.Drawing.Size(223, 45);
             this.btnManageUsers.TabIndex = 11;
             this.btnManageUsers.Text = "Manage Users";
             this.btnManageUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
             // btnTransactions
             // 
@@ -169,11 +172,11 @@
             this.btnTransactions.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransactions.ForeColor = System.Drawing.Color.White;
             this.btnTransactions.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnTransactions.Location = new System.Drawing.Point(8, 301);
+            this.btnTransactions.Location = new System.Drawing.Point(8, 289);
             this.btnTransactions.Name = "btnTransactions";
             this.btnTransactions.Size = new System.Drawing.Size(223, 45);
             this.btnTransactions.TabIndex = 10;
-            this.btnTransactions.Text = "Transactions";
+            this.btnTransactions.Text = "Transfare Money";
             this.btnTransactions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnFindClient
@@ -192,7 +195,7 @@
             this.btnFindClient.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindClient.ForeColor = System.Drawing.Color.White;
             this.btnFindClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnFindClient.Location = new System.Drawing.Point(8, 236);
+            this.btnFindClient.Location = new System.Drawing.Point(8, 230);
             this.btnFindClient.Name = "btnFindClient";
             this.btnFindClient.Size = new System.Drawing.Size(223, 45);
             this.btnFindClient.TabIndex = 9;
@@ -205,7 +208,7 @@
             this.guna2Separator2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator2.FillColor = System.Drawing.Color.RoyalBlue;
             this.guna2Separator2.FillThickness = 2;
-            this.guna2Separator2.Location = new System.Drawing.Point(0, 664);
+            this.guna2Separator2.Location = new System.Drawing.Point(0, 667);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(233, 10);
             this.guna2Separator2.TabIndex = 5;
@@ -270,6 +273,29 @@
             this.pnlMainContainer.Size = new System.Drawing.Size(1153, 788);
             this.pnlMainContainer.TabIndex = 1;
             // 
+            // btnWithdraw
+            // 
+            this.btnWithdraw.BackColor = System.Drawing.Color.Transparent;
+            this.btnWithdraw.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnWithdraw.BorderRadius = 15;
+            this.btnWithdraw.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(20)))), ((int)(((byte)(140)))));
+            this.btnWithdraw.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnWithdraw.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.btnWithdraw.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnWithdraw.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnWithdraw.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnWithdraw.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnWithdraw.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnWithdraw.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWithdraw.ForeColor = System.Drawing.Color.White;
+            this.btnWithdraw.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnWithdraw.Location = new System.Drawing.Point(8, 407);
+            this.btnWithdraw.Name = "btnWithdraw";
+            this.btnWithdraw.Size = new System.Drawing.Size(223, 45);
+            this.btnWithdraw.TabIndex = 16;
+            this.btnWithdraw.Text = "Withdraw";
+            this.btnWithdraw.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,11 +323,12 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Button btnManageClients;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2Button btnLoginHistory;
         private Guna.UI2.WinForms.Guna2Button btnCurrencyExchange;
         private Guna.UI2.WinForms.Guna2Button btnManageUsers;
         private Guna.UI2.WinForms.Guna2Button btnTransactions;
         private Guna.UI2.WinForms.Guna2Button btnFindClient;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnWithdraw;
     }
 }

@@ -162,6 +162,7 @@ namespace DAL_BankManagement
                 try { connection.Open(); rowsAffected = command.ExecuteNonQuery(); }
                 catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
             }
+            
             return (rowsAffected > 0);
         }
 

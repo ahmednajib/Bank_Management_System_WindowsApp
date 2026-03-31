@@ -149,13 +149,15 @@ namespace DAL_BankManagement
         public static bool DeletePerson(int PersonID)
         {
             int rowsAffected = 0;
-            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-            using (SqlCommand command = new SqlCommand("SP_DeletePerson", connection))
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString)) 
             {
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@PersonID", PersonID);
-                try { connection.Open(); rowsAffected = command.ExecuteNonQuery(); }
-                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
+                using (SqlCommand command = new SqlCommand("SP_DeletePerson", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@PersonID", PersonID);
+                    try { connection.Open(); rowsAffected = command.ExecuteNonQuery(); }
+                    catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
+                }
             }
             return (rowsAffected > 0);
         }

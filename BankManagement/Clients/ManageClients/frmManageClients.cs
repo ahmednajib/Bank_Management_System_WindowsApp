@@ -206,7 +206,7 @@ namespace BankManagement.Clients.ManageClients
             _LoadClientsData(); // Refresh the data after updating the client
         }
 
-        private void diactivateClientToolStripMenuItem_Click(object sender, EventArgs e)
+        private void deactivateClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int SelectedClientID = Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value);
             clsClient client = clsClient.Find(SelectedClientID);

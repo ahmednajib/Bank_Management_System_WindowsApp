@@ -1,15 +1,6 @@
-﻿using BankManagement.Properties;
-using BLL_BankManagement;
+﻿using BLL_BankManagement;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace BankManagement.Clients.Add_Update_Client
 {
@@ -83,9 +74,9 @@ namespace BankManagement.Clients.Add_Update_Client
                 return;
             }
 
-            if(_Mode == enMode.AddNew) 
-            { 
-                if(clsClient.Find(ctrlPersonCardWithFilter1.SelectedPersonInfo.NationalNo) != null)
+            if (_Mode == enMode.AddNew)
+            {
+                if (clsClient.Find(ctrlPersonCardWithFilter1.SelectedPersonInfo.NationalNo) != null)
                 {
                     MessageBox.Show("This person is already a client, please select another person", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -109,7 +100,7 @@ namespace BankManagement.Clients.Add_Update_Client
 
 
                 // Trigger the event to send data back to the caller form.
-                DataBack?.Invoke(this, _Client.PersonID);
+                DataBack?.Invoke(this, _Client.ClientID);
             }
             else
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

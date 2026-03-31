@@ -42,7 +42,7 @@ namespace BLL_BankManagement
             this.CreatedByUserID = CreatedByUserID;
 
             this.ClientInfo = clsClient.Find(ClientID);
-            this.CreatorInfo = clsUser.FindByUserID(CreatedByUserID);
+            this.CreatorInfo = clsUser.Find(CreatedByUserID);
             this.Mode = enMode.Update;
         }
 
