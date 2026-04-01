@@ -1,56 +1,97 @@
 ﻿using System;
+using DAL_BankManagement;
 
 namespace BLL_BankManagement
 {
     public class clsTransaction
     {
-        enum enTransactionType { Deposit = 1, Withdrawal = 2, Transfer = 3 }
-        public enum enMode { AddNew = 0, Update = 1 };
-        public enMode Mode = enMode.AddNew;
+        public enum enTransactionType { Deposit = 1, Withdraw = 2, Transfer = 3 };
 
-        public int TransactionID { get; set; }
-        public int TransactionTypeID { get; set; }
-        public clsTransactionType TransactionTypeInfo { get; set; }
+        public int TransactionID { get; private set; }
+        public enTransactionType TransactionType { get; set; }
         public decimal Amount { get; set; }
-        public DateTime TransactionDate { get; set; }
         public string Description { get; set; }
         public int SenderAccountID { get; set; }
-        //public clsAccount SenderAccountInfo { get; set; }
         public int ReceiverAccountID { get; set; }
-        //public clsAccount ReceiverAccountInfo { get; set; }
         public int CreatedByUserID { get; set; }
-        public clsUser CreatedByUserInfo { get; set; }
 
         public clsTransaction()
         {
             this.TransactionID = -1;
-            this.TransactionTypeID = -1;
             this.Amount = 0;
-            this.TransactionDate = DateTime.Now;
-            this.Description = string.Empty;
-            this.SenderAccountID = -1;
-            this.ReceiverAccountID = -1;
-            this.CreatedByUserID = -1;
-
-            Mode = enMode.AddNew;
+            this.Description = "";
+            this.SenderAccountID = 0;
+            this.ReceiverAccountID = 0;
         }
 
-        public clsTransaction(int transactionID, int transactionTypeID, decimal amount, DateTime transactionDate, string description, int senderAccountID, int receiverAccountID, int createdByUserID)
+        // Public execution method
+        public bool Execute(enTransactionType TransactionType)
         {
-            this.TransactionID = transactionID;
-            this.TransactionTypeID = transactionTypeID;
-            this.TransactionTypeInfo = clsTransactionType.Find(transactionTypeID);
-            this.Amount = amount;
-            this.TransactionDate = transactionDate;
-            this.Description = description;
-            this.SenderAccountID = senderAccountID;
-            //this.SenderAccountInfo = clsAccount.Find(senderAccountID);
-            this.ReceiverAccountID = receiverAccountID;
-            //this.ReceiverAccountInfo = clsAccount.Find(receiverAccountID);
-            this.CreatedByUserID = createdByUserID;
-            this.CreatedByUserInfo = clsUser.Find(createdByUserID);
+            this.TransactionType = TransactionType;
 
-            Mode = enMode.Update;
+            switch (this.TransactionType)
+            {
+                case enTransactionType.Deposit:
+                    return _PerformDeposit();
+
+                case enTransactionType.Withdraw:
+                    return _PerformWithdrawal();
+
+                case enTransactionType.Transfer:
+                    return _PerformTransfer();
+
+                default:
+                    return false;
+            }
+        }
+
+        // --- Private Logic Functions ---
+
+        private bool _PerformDeposit()
+        {
+            // For Deposits: Sender is 0 (System), Receiver is the target account
+            this.TransactionID = clsTransactionData.ExecuteTransaction(
+                (int)enTransactionType.Deposit,
+                this.Amount,
+                this.Description,
+                0,
+                this.ReceiverAccountID,
+                this.CreatedByUserID
+            );
+
+            return (this.TransactionID != -1);
+        }
+
+        private bool _PerformWithdrawal()
+        {
+            // For Withdrawals: Receiver is 0 (System), Sender is the target account
+            this.TransactionID = clsTransactionData.ExecuteTransaction(
+                (int)enTransactionType.Withdraw,
+                this.Amount,
+                this.Description,
+                this.SenderAccountID,
+                0,
+                this.CreatedByUserID
+            );
+
+            return (this.TransactionID != -1);
+        }
+
+        private bool _PerformTransfer()
+        {
+            // For Transfers: Both Sender and Receiver IDs are required
+            if (this.SenderAccountID == this.ReceiverAccountID) return false;
+
+            this.TransactionID = clsTransactionData.ExecuteTransaction(
+                (int)enTransactionType.Transfer,
+                this.Amount,
+                this.Description,
+                this.SenderAccountID,
+                this.ReceiverAccountID,
+                this.CreatedByUserID
+            );
+
+            return (this.TransactionID != -1);
         }
     }
 }
