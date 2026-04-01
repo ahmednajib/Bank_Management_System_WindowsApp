@@ -114,5 +114,21 @@ namespace BankManagement
             // Pass the form you created for the Client List
             OpenChildForm(new frmListUsers(), clickedButton);
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2Button clickedButton = (Guna.UI2.WinForms.Guna2Button)sender;
+
+            // Pass the form you created for the Client List
+            OpenChildForm(new frmUserInfo(clsGlobal.CurrentUser.UserID), clickedButton);
+        }
+
+        private void btnCurrencyExchange_Click(object sender, EventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2Button clickedButton = (Guna.UI2.WinForms.Guna2Button)sender;
+
+            // Pass the form you created for the Client List
+            OpenChildForm(new frmChangePassword(clsGlobal.CurrentUser.UserID), clickedButton);
+        }
     }
 }

@@ -641,7 +641,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdatePerson";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

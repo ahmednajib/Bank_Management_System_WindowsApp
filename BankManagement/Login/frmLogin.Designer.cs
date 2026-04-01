@@ -40,10 +40,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblDate = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblDate = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.LoginFailedMessage.SuspendLayout();
@@ -55,8 +55,8 @@
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.Controls.Add(this.guna2ShadowPanel1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(14)))), ((int)(((byte)(89)))));
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(60)))), ((int)(((byte)(80)))));
             this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
@@ -67,6 +67,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.lblDate);
             this.guna2ShadowPanel1.Controls.Add(this.chkRememberMe);
             this.guna2ShadowPanel1.Controls.Add(this.btnClose);
             this.guna2ShadowPanel1.Controls.Add(this.btnLogin);
@@ -75,7 +76,6 @@
             this.guna2ShadowPanel1.Controls.Add(this.label2);
             this.guna2ShadowPanel1.Controls.Add(this.txtPassword);
             this.guna2ShadowPanel1.Controls.Add(this.txtUserName);
-            this.guna2ShadowPanel1.Controls.Add(this.lblDate);
             this.guna2ShadowPanel1.Controls.Add(this.lblLogin);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(213, 11);
@@ -97,7 +97,7 @@
             this.chkRememberMe.CheckMarkColor = System.Drawing.Color.Blue;
             this.chkRememberMe.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRememberMe.ForeColor = System.Drawing.Color.White;
-            this.chkRememberMe.Location = new System.Drawing.Point(58, 282);
+            this.chkRememberMe.Location = new System.Drawing.Point(58, 283);
             this.chkRememberMe.Name = "chkRememberMe";
             this.chkRememberMe.Size = new System.Drawing.Size(107, 17);
             this.chkRememberMe.TabIndex = 9;
@@ -119,7 +119,7 @@
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(183, 371);
+            this.btnClose.Location = new System.Drawing.Point(58, 371);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(123, 38);
             this.btnClose.TabIndex = 8;
@@ -136,9 +136,9 @@
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(58, 371);
+            this.btnLogin.Location = new System.Drawing.Point(187, 371);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(119, 38);
+            this.btnLogin.Size = new System.Drawing.Size(123, 38);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -235,17 +235,6 @@
             this.txtUserName.TabIndex = 2;
             this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserName_Validating);
             // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(244, 15);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(73, 16);
-            this.lblDate.TabIndex = 1;
-            this.lblDate.Text = "03/02/2026";
-            // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
@@ -267,6 +256,17 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(130, 17);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(106, 18);
+            this.lblDate.TabIndex = 10;
+            this.lblDate.Text = "03/02/2026";
             // 
             // frmLogin
             // 
@@ -299,7 +299,6 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
@@ -310,6 +309,7 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2CheckBox chkRememberMe;
+        private System.Windows.Forms.Label lblDate;
     }
 }
 

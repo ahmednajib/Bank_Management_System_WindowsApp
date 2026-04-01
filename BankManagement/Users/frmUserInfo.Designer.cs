@@ -34,7 +34,7 @@
             // 
             // ctrlUserCard1
             // 
-            this.ctrlUserCard1.Location = new System.Drawing.Point(0, 50);
+            this.ctrlUserCard1.Location = new System.Drawing.Point(196, 71);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
             this.ctrlUserCard1.Size = new System.Drawing.Size(660, 333);
             this.ctrlUserCard1.TabIndex = 0;
@@ -44,7 +44,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(180, 2);
+            this.lblTitle.Location = new System.Drawing.Point(376, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(310, 44);
             this.lblTitle.TabIndex = 5;
@@ -55,7 +55,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(662, 379);
+            this.ClientSize = new System.Drawing.Size(998, 433);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.ctrlUserCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
