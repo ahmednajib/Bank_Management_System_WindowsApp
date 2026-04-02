@@ -67,6 +67,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounts\Components\ctrlAccountInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Accounts\Components\ctrlAccountInfo.Designer.cs">
+      <DependentUpon>ctrlAccountInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\frmAccountInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\frmAccountInfo.Designer.cs">
+      <DependentUpon>frmAccountInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clients\frm FindClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,12 @@
     <Compile Include="Clients\Components\ctrlClientCard.Designer.cs">
       <DependentUpon>ctrlClientCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clients\frmClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\frmClientInfo.Designer.cs">
+      <DependentUpon>frmClientInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clients\ManageClients\frmManageClients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +132,18 @@
     </Compile>
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\frmAddUpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\frmAddUpdateAccount.Designer.cs">
+      <DependentUpon>frmAddUpdateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\ManageAccounts&amp;Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\ManageAccounts&amp;Transactions.Designer.cs">
+      <DependentUpon>ManageAccounts&amp;Transactions.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonalInformation\Components\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
@@ -165,6 +195,15 @@
     <Compile Include="Users\frmUserInfo.Designer.cs">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Accounts\Components\ctrlAccountInfo.resx">
+      <DependentUpon>ctrlAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\frmAccountInfo.resx">
+      <DependentUpon>frmAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\frmAddUpdateAccount.resx">
+      <DependentUpon>frmAddUpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients\frm FindClient.resx">
       <DependentUpon>frm FindClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +216,9 @@
     <EmbeddedResource Include="Clients\Components\ctrlClientCard.resx">
       <DependentUpon>ctrlClientCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Clients\frmClientInfo.resx">
+      <DependentUpon>frmClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients\ManageClients\frmManageClients.resx">
       <DependentUpon>frmManageClients.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\ManageAccounts&amp;Transactions.resx">
+      <DependentUpon>ManageAccounts&amp;Transactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalInformation\Components\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
@@ -296,6 +341,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -266,11 +266,6 @@ namespace BankManagement.Clients.ManageClients
             }
         }
 
-        private void addAnAccountToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // This functionality is not implemented yet.
-        }
-
         private void guna2ContextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
             int SelectedClientID = Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value);
@@ -285,6 +280,23 @@ namespace BankManagement.Clients.ManageClients
 
             diactivateClientToolStripMenuItem.Enabled = client.IsActive;
             activateClientToolStripMenuItem.Enabled = !client.IsActive;
+        }
+
+        private void clientInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientInfo clientInfoForm = new frmClientInfo(Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value));
+            clientInfoForm.ShowDialog();
+            _LoadClientsData();
+        }
+
+        private void addAnAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // This functionality is not implemented yet.
+        }
+
+        private void allAccountsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // This functionality is not implemented yet.
         }
     }
 }

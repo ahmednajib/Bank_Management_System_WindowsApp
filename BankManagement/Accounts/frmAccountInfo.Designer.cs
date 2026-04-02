@@ -1,6 +1,6 @@
-﻿namespace BankManagement.Users
+﻿namespace BankManagement.Accounts
 {
-    partial class frmUserInfo
+    partial class frmAccountInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ctrlUserCard1 = new BankManagement.Users.ctrlUserCard();
+            this.ctrlAccountInfo1 = new BankManagement.Accounts.Accounts.ctrlAccountInfo();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -37,41 +37,38 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(343, 11);
+            this.lblTitle.Location = new System.Drawing.Point(286, 2);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(310, 44);
-            this.lblTitle.TabIndex = 11;
-            this.lblTitle.Text = "Current User Info";
+            this.lblTitle.Size = new System.Drawing.Size(228, 44);
+            this.lblTitle.TabIndex = 12;
+            this.lblTitle.Text = "Account Info";
             // 
-            // ctrlUserCard1
+            // ctrlAccountInfo1
             // 
-            this.ctrlUserCard1.Location = new System.Drawing.Point(163, 59);
-            this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(660, 333);
-            this.ctrlUserCard1.TabIndex = 10;
+            this.ctrlAccountInfo1.Location = new System.Drawing.Point(65, 51);
+            this.ctrlAccountInfo1.Name = "ctrlAccountInfo1";
+            this.ctrlAccountInfo1.Size = new System.Drawing.Size(671, 416);
+            this.ctrlAccountInfo1.TabIndex = 13;
             // 
-            // frmUserInfo
+            // frmAccountInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(969, 403);
+            this.ClientSize = new System.Drawing.Size(800, 486);
+            this.Controls.Add(this.ctrlAccountInfo1);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.ctrlUserCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmUserInfo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Current User Information";
-            this.Load += new System.EventHandler(this.frmUserInfo_Load);
-            this.Leave += new System.EventHandler(this.frmUserInfo_Leave);
+            this.Name = "frmAccountInfo";
+            this.Text = "Account Information";
+            this.Load += new System.EventHandler(this.frmAccountInfo_Load);
+            this.Leave += new System.EventHandler(this.frmAccountInfo_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
-        private ctrlUserCard ctrlUserCard1;
+        private Accounts.ctrlAccountInfo ctrlAccountInfo1;
     }
 }

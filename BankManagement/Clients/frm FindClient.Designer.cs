@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clientCardWithFilter1 = new BankManagement.Clients.Components.ClientCardWithFilter();
+            this.ctrlclientCardWithFilter1 = new BankManagement.Clients.Components.ctrlClientCardWithFilter();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // clientCardWithFilter1
+            // ctrlclientCardWithFilter1
             // 
-            this.clientCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.clientCardWithFilter1.FilterEnabled = true;
-            this.clientCardWithFilter1.Location = new System.Drawing.Point(32, 29);
-            this.clientCardWithFilter1.Name = "clientCardWithFilter1";
-            this.clientCardWithFilter1.ShowAddClient = true;
-            this.clientCardWithFilter1.Size = new System.Drawing.Size(671, 396);
-            this.clientCardWithFilter1.TabIndex = 0;
+            this.ctrlclientCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ctrlclientCardWithFilter1.FilterEnabled = true;
+            this.ctrlclientCardWithFilter1.Location = new System.Drawing.Point(32, 29);
+            this.ctrlclientCardWithFilter1.Name = "ctrlclientCardWithFilter1";
+            this.ctrlclientCardWithFilter1.ShowAddClient = true;
+            this.ctrlclientCardWithFilter1.Size = new System.Drawing.Size(671, 396);
+            this.ctrlclientCardWithFilter1.TabIndex = 0;
             // 
             // lblTitle
             // 
@@ -60,7 +60,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.clientCardWithFilter1);
+            this.guna2Panel1.Controls.Add(this.ctrlclientCardWithFilter1);
             this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel1.Location = new System.Drawing.Point(209, 82);
@@ -87,7 +87,7 @@
 
         #endregion
 
-        private Components.ClientCardWithFilter clientCardWithFilter1;
+        private Components.ctrlClientCardWithFilter ctrlclientCardWithFilter1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }

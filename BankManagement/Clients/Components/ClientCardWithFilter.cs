@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace BankManagement.Clients.Components
 {
-    public partial class ClientCardWithFilter : UserControl
+    public partial class ctrlClientCardWithFilter : UserControl
     {
         // Define a custom event handler delegate with parameters
         public event Action<int> OnClientSelected;
@@ -50,7 +50,7 @@ namespace BankManagement.Clients.Components
             }
         }
 
-        public ClientCardWithFilter()
+        public ctrlClientCardWithFilter()
         {
             InitializeComponent();
         }

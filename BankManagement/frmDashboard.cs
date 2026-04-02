@@ -1,6 +1,7 @@
 ﻿using BankManagement.Clients;
 using BankManagement.Clients.Add_Update_Client;
 using BankManagement.Clients.ManageClients;
+using BankManagement.ManageAccounts_Transactions;
 using BankManagement.Users;
 using Classes;
 using System;
@@ -129,6 +130,14 @@ namespace BankManagement
 
             // Pass the form you created for the Client List
             OpenChildForm(new frmChangePassword(clsGlobal.CurrentUser.UserID), clickedButton);
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2Button clickedButton = (Guna.UI2.WinForms.Guna2Button)sender;
+
+            // Pass the form you created for the Client List
+            OpenChildForm(new frmManageAccounts_Transactions(), clickedButton);
         }
     }
 }
