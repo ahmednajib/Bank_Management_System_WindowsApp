@@ -59,6 +59,7 @@
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAccountInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Account Information";
             this.Load += new System.EventHandler(this.frmAccountInfo_Load);
             this.Leave += new System.EventHandler(this.frmAccountInfo_Leave);

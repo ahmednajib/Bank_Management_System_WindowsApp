@@ -31,10 +31,10 @@
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ctrlClientCardWithFilter1 = new BankManagement.Clients.Components.ctrlClientCardWithFilter();
             this.gbAccountInformation = new System.Windows.Forms.GroupBox();
-            this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblUserID = new System.Windows.Forms.Label();
+            this.txtAccountNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtConfirmPinCode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPinCode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblAccountID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -53,7 +53,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(222, -5);
+            this.lblTitle.Location = new System.Drawing.Point(222, -4);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(311, 44);
             this.lblTitle.TabIndex = 8;
@@ -63,7 +63,7 @@
             // 
             this.ctrlClientCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ctrlClientCardWithFilter1.FilterEnabled = true;
-            this.ctrlClientCardWithFilter1.Location = new System.Drawing.Point(7, 35);
+            this.ctrlClientCardWithFilter1.Location = new System.Drawing.Point(7, 36);
             this.ctrlClientCardWithFilter1.Name = "ctrlClientCardWithFilter1";
             this.ctrlClientCardWithFilter1.ShowAddClient = true;
             this.ctrlClientCardWithFilter1.Size = new System.Drawing.Size(669, 396);
@@ -71,10 +71,10 @@
             // 
             // gbAccountInformation
             // 
-            this.gbAccountInformation.Controls.Add(this.txtUserName);
-            this.gbAccountInformation.Controls.Add(this.txtConfirmPassword);
-            this.gbAccountInformation.Controls.Add(this.txtPassword);
-            this.gbAccountInformation.Controls.Add(this.lblUserID);
+            this.gbAccountInformation.Controls.Add(this.txtAccountNumber);
+            this.gbAccountInformation.Controls.Add(this.txtConfirmPinCode);
+            this.gbAccountInformation.Controls.Add(this.txtPinCode);
+            this.gbAccountInformation.Controls.Add(this.lblAccountID);
             this.gbAccountInformation.Controls.Add(this.label4);
             this.gbAccountInformation.Controls.Add(this.label3);
             this.gbAccountInformation.Controls.Add(this.guna2VSeparator1);
@@ -83,82 +83,82 @@
             this.gbAccountInformation.Controls.Add(this.rbInActive);
             this.gbAccountInformation.Controls.Add(this.rbActive);
             this.gbAccountInformation.Controls.Add(this.label5);
-            this.gbAccountInformation.Location = new System.Drawing.Point(19, 430);
+            this.gbAccountInformation.Location = new System.Drawing.Point(19, 431);
             this.gbAccountInformation.Name = "gbAccountInformation";
             this.gbAccountInformation.Size = new System.Drawing.Size(652, 114);
             this.gbAccountInformation.TabIndex = 0;
             this.gbAccountInformation.TabStop = false;
             this.gbAccountInformation.Text = "Account Information";
             // 
-            // txtUserName
+            // txtAccountNumber
             // 
-            this.txtUserName.BorderRadius = 10;
-            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserName.DefaultText = "";
-            this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserName.Location = new System.Drawing.Point(12, 68);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.PlaceholderText = "User Name";
-            this.txtUserName.SelectedText = "";
-            this.txtUserName.Size = new System.Drawing.Size(167, 27);
-            this.txtUserName.TabIndex = 163;
+            this.txtAccountNumber.BorderRadius = 10;
+            this.txtAccountNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAccountNumber.DefaultText = "";
+            this.txtAccountNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAccountNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAccountNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAccountNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAccountNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAccountNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAccountNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAccountNumber.Location = new System.Drawing.Point(12, 68);
+            this.txtAccountNumber.Name = "txtAccountNumber";
+            this.txtAccountNumber.PlaceholderText = "Account Number";
+            this.txtAccountNumber.SelectedText = "";
+            this.txtAccountNumber.Size = new System.Drawing.Size(167, 27);
+            this.txtAccountNumber.TabIndex = 163;
             // 
-            // txtConfirmPassword
+            // txtConfirmPinCode
             // 
-            this.txtConfirmPassword.BorderRadius = 10;
-            this.txtConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmPassword.DefaultText = "";
-            this.txtConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(343, 83);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.PlaceholderText = "Confirm Pin Code";
-            this.txtConfirmPassword.SelectedText = "";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(167, 27);
-            this.txtConfirmPassword.TabIndex = 162;
+            this.txtConfirmPinCode.BorderRadius = 10;
+            this.txtConfirmPinCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPinCode.DefaultText = "";
+            this.txtConfirmPinCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmPinCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmPinCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPinCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPinCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPinCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtConfirmPinCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPinCode.Location = new System.Drawing.Point(343, 83);
+            this.txtConfirmPinCode.Name = "txtConfirmPinCode";
+            this.txtConfirmPinCode.PasswordChar = '*';
+            this.txtConfirmPinCode.PlaceholderText = "Confirm Pin Code";
+            this.txtConfirmPinCode.SelectedText = "";
+            this.txtConfirmPinCode.Size = new System.Drawing.Size(167, 27);
+            this.txtConfirmPinCode.TabIndex = 162;
             // 
-            // txtPassword
+            // txtPinCode
             // 
-            this.txtPassword.BorderRadius = 10;
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "";
-            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(343, 29);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.PlaceholderText = "Enter Pin Code";
-            this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(167, 27);
-            this.txtPassword.TabIndex = 161;
+            this.txtPinCode.BorderRadius = 10;
+            this.txtPinCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPinCode.DefaultText = "";
+            this.txtPinCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPinCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPinCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPinCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPinCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPinCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPinCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPinCode.Location = new System.Drawing.Point(343, 29);
+            this.txtPinCode.Name = "txtPinCode";
+            this.txtPinCode.PasswordChar = '*';
+            this.txtPinCode.PlaceholderText = "Enter Pin Code";
+            this.txtPinCode.SelectedText = "";
+            this.txtPinCode.Size = new System.Drawing.Size(167, 27);
+            this.txtPinCode.TabIndex = 161;
             // 
-            // lblUserID
+            // lblAccountID
             // 
-            this.lblUserID.AutoSize = true;
-            this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(92, 20);
-            this.lblUserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(23, 16);
-            this.lblUserID.TabIndex = 160;
-            this.lblUserID.Text = "??";
+            this.lblAccountID.AutoSize = true;
+            this.lblAccountID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccountID.Location = new System.Drawing.Point(92, 20);
+            this.lblAccountID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAccountID.Name = "lblAccountID";
+            this.lblAccountID.Size = new System.Drawing.Size(23, 16);
+            this.lblAccountID.TabIndex = 160;
+            this.lblAccountID.Text = "??";
             // 
             // label4
             // 
@@ -185,7 +185,7 @@
             // guna2VSeparator1
             // 
             this.guna2VSeparator1.FillThickness = 2;
-            this.guna2VSeparator1.Location = new System.Drawing.Point(326, 5);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(324, 5);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 109);
             this.guna2VSeparator1.TabIndex = 156;
@@ -260,7 +260,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnClose.Location = new System.Drawing.Point(160, 552);
+            this.btnClose.Location = new System.Drawing.Point(160, 553);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(167, 38);
             this.btnClose.TabIndex = 101;
@@ -280,7 +280,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.btnSave.Location = new System.Drawing.Point(365, 552);
+            this.btnSave.Location = new System.Drawing.Point(365, 553);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(167, 38);
             this.btnSave.TabIndex = 100;
@@ -312,10 +312,10 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
         private Clients.Components.ctrlClientCardWithFilter ctrlClientCardWithFilter1;
         private System.Windows.Forms.GroupBox gbAccountInformation;
-        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
-        private Guna.UI2.WinForms.Guna2TextBox txtConfirmPassword;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private System.Windows.Forms.Label lblUserID;
+        private Guna.UI2.WinForms.Guna2TextBox txtAccountNumber;
+        private Guna.UI2.WinForms.Guna2TextBox txtConfirmPinCode;
+        private Guna.UI2.WinForms.Guna2TextBox txtPinCode;
+        private System.Windows.Forms.Label lblAccountID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;

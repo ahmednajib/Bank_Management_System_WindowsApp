@@ -330,11 +330,11 @@
             this.cmbFilterBy.ItemHeight = 20;
             this.cmbFilterBy.Items.AddRange(new object[] {
             "None",
+            "Account ID",
             "Client ID",
-            "Full Name",
-            "National No",
-            "Nationality",
-            "Gender",
+            "Account Number",
+            "Client Name",
+            "Created By",
             "Is Active"});
             this.cmbFilterBy.Location = new System.Drawing.Point(81, 116);
             this.cmbFilterBy.Name = "cmbFilterBy";
