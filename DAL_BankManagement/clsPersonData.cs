@@ -8,7 +8,9 @@ namespace DAL_BankManagement
     public class clsPersonData
     {
         // Private helper to fill data safely using Convert
-        private static void _FillPersonInfoFromReader(SqlDataReader reader, ref int PersonID, ref string NationalNo, ref string FirstName, ref string SecondName, ref string ThirdName, ref string LastName, ref DateTime DateOfBirth, ref int Gender, ref string Address, ref string Phone, ref string Email, ref int NationalityCountryID, ref string ImagePath)
+        private static void _FillPersonInfoFromReader(SqlDataReader reader, ref int PersonID, ref string NationalNo, ref string FirstName,
+            ref string SecondName, ref string ThirdName, ref string LastName, ref DateTime DateOfBirth, ref int Gender, ref string Address, 
+            ref string Phone, ref string Email, ref int NationalityCountryID, ref string ImagePath)
         {
             PersonID = Convert.ToInt32(reader["PersonID"]);
             NationalNo = Convert.ToString(reader["NationalNo"]);
