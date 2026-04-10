@@ -1,4 +1,5 @@
 ﻿using BankManagement.Accounts;
+using BankManagement.ManageAccounts_Transactions.Accounts;
 using BLL_BankManagement;
 using System;
 using System.Collections.Generic;
@@ -191,10 +192,10 @@ namespace BankManagement.ManageAccounts_Transactions
         {
             if (cmbIsActive.Text == "Yes")
                 // Use single quotes because the View returns a string "Active"
-                _dtAllAccounts.DefaultView.RowFilter = "IsActive = 'Active'";
+                _dtAllAccounts.DefaultView.RowFilter = "IsActive = 'True'";
             else if (cmbIsActive.Text == "No")
                 // Use single quotes because the View returns a string "Not Active"
-                _dtAllAccounts.DefaultView.RowFilter = "IsActive = 'Not Active'";
+                _dtAllAccounts.DefaultView.RowFilter = "IsActive = 'False'";
             else
                 // Clear the filter
                 _dtAllAccounts.DefaultView.RowFilter = "";
@@ -213,12 +214,18 @@ namespace BankManagement.ManageAccounts_Transactions
 
         private void addNewAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // This event Will be implemented later.
+            frmAddUpdateAccount frm = new frmAddUpdateAccount();
+            frm.ShowDialog();
+
+            _LoadAccountsData();
         }
 
         private void updateAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // This event Will be implemented later.
+            frmAddUpdateAccount frm = new frmAddUpdateAccount((int)dgvAccounts.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+
+            _LoadAccountsData();
         }
 
         private void activateAccountToolStripMenuItem_Click(object sender, EventArgs e)

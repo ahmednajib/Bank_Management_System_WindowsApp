@@ -35,6 +35,8 @@ namespace BankManagement.Users
             _UserID = UserID;
             _Mode = enMode.Update;
             lblTitle.Text = "Update User";
+
+            txtUserName.Enabled = false;
         }
 
         private void _ResetDefualtValues()
@@ -70,7 +72,7 @@ namespace BankManagement.Users
             //check if the User was found or not, if not found we close the form and show a message.
             if (_User == null)
             {
-                MessageBox.Show("This form will be closed because No Contact with ID = " + _User);
+                MessageBox.Show("This form will be closed because No User with ID = " + _User);
                 this.Close();
                 return;
             }
@@ -141,6 +143,7 @@ namespace BankManagement.Users
                 //change form mode to update.
                 _Mode = enMode.Update;
                 lblTitle.Text = "Update User";
+                txtUserName.Enabled = false;
 
                 MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblUserID.Text = _User.UserID.ToString();
@@ -154,9 +157,6 @@ namespace BankManagement.Users
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (_Mode == enMode.Update)
-                return;
-
             if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
             {
                 e.Cancel = true;
@@ -218,7 +218,11 @@ namespace BankManagement.Users
                 ctrlPersonCardWithFilter1.FilterFocus();
                 return;
             }
-            gbUserInformation.Enabled = true;
+
+            if (obj != -1)
+                gbUserInformation.Enabled = true;
+            else
+                gbUserInformation.Enabled = false;
         }
     }
 }

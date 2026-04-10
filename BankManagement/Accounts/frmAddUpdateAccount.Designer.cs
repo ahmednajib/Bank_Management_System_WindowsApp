@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ctrlClientCardWithFilter1 = new BankManagement.Clients.Components.ctrlClientCardWithFilter();
             this.gbAccountInformation = new System.Windows.Forms.GroupBox();
             this.txtAccountNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtConfirmPinCode = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,7 +45,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.ctrlClientCardWithFilter1 = new BankManagement.Clients.Components.ctrlClientCardWithFilter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbAccountInformation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -53,21 +56,11 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(222, -4);
+            this.lblTitle.Location = new System.Drawing.Point(200, -4);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(311, 44);
             this.lblTitle.TabIndex = 8;
             this.lblTitle.Text = "Add New Account";
-            // 
-            // ctrlClientCardWithFilter1
-            // 
-            this.ctrlClientCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ctrlClientCardWithFilter1.FilterEnabled = true;
-            this.ctrlClientCardWithFilter1.Location = new System.Drawing.Point(7, 36);
-            this.ctrlClientCardWithFilter1.Name = "ctrlClientCardWithFilter1";
-            this.ctrlClientCardWithFilter1.ShowAddClient = true;
-            this.ctrlClientCardWithFilter1.Size = new System.Drawing.Size(669, 396);
-            this.ctrlClientCardWithFilter1.TabIndex = 10;
             // 
             // gbAccountInformation
             // 
@@ -108,6 +101,7 @@
             this.txtAccountNumber.SelectedText = "";
             this.txtAccountNumber.Size = new System.Drawing.Size(167, 27);
             this.txtAccountNumber.TabIndex = 163;
+            this.txtAccountNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtAccountNumber_Validating);
             // 
             // txtConfirmPinCode
             // 
@@ -128,6 +122,7 @@
             this.txtConfirmPinCode.SelectedText = "";
             this.txtConfirmPinCode.Size = new System.Drawing.Size(167, 27);
             this.txtConfirmPinCode.TabIndex = 162;
+            this.txtConfirmPinCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPinCode_Validating);
             // 
             // txtPinCode
             // 
@@ -148,6 +143,7 @@
             this.txtPinCode.SelectedText = "";
             this.txtPinCode.Size = new System.Drawing.Size(167, 27);
             this.txtPinCode.TabIndex = 161;
+            this.txtPinCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtPinCode_Validating);
             // 
             // lblAccountID
             // 
@@ -265,6 +261,7 @@
             this.btnClose.Size = new System.Drawing.Size(167, 38);
             this.btnClose.TabIndex = 101;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -285,6 +282,22 @@
             this.btnSave.Size = new System.Drawing.Size(167, 38);
             this.btnSave.TabIndex = 100;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // ctrlClientCardWithFilter1
+            // 
+            this.ctrlClientCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ctrlClientCardWithFilter1.FilterEnabled = true;
+            this.ctrlClientCardWithFilter1.Location = new System.Drawing.Point(7, 36);
+            this.ctrlClientCardWithFilter1.Name = "ctrlClientCardWithFilter1";
+            this.ctrlClientCardWithFilter1.ShowAddClient = true;
+            this.ctrlClientCardWithFilter1.Size = new System.Drawing.Size(669, 396);
+            this.ctrlClientCardWithFilter1.TabIndex = 10;
+            this.ctrlClientCardWithFilter1.OnClientSelected += new System.Action<int>(this.ctrlClientCardWithFilter1_OnClientSelected);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddUpdateAccount
             // 
@@ -301,8 +314,10 @@
             this.Name = "frmAddUpdateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Update Account";
+            this.Load += new System.EventHandler(this.frmAddUpdateAccount_Load);
             this.gbAccountInformation.ResumeLayout(false);
             this.gbAccountInformation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +341,6 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -37,11 +37,11 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitle.Location = new System.Drawing.Point(343, 11);
+            this.lblTitle.Location = new System.Drawing.Point(401, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(310, 44);
+            this.lblTitle.Size = new System.Drawing.Size(167, 44);
             this.lblTitle.TabIndex = 11;
-            this.lblTitle.Text = "Current User Info";
+            this.lblTitle.Text = "User Info";
             // 
             // ctrlUserCard1
             // 
@@ -61,7 +61,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmUserInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Current User Information";
+            this.Text = "User Information";
             this.Load += new System.EventHandler(this.frmUserInfo_Load);
             this.Leave += new System.EventHandler(this.frmUserInfo_Leave);
             this.ResumeLayout(false);
