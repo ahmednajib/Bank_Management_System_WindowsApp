@@ -25,7 +25,7 @@ namespace BLL_BankManagement
         }
 
         // Public execution method
-        public bool Execute(enTransactionType TransactionType)
+        public bool PerformNewTransaction(enTransactionType TransactionType)
         {
             this.TransactionType = TransactionType;
 

@@ -1,14 +1,10 @@
 ﻿using BankManagement.Accounts;
 using BankManagement.ManageAccounts_Transactions.Accounts;
+using BankManagement.Transactions;
 using BLL_BankManagement;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BankManagement.ManageAccounts_Transactions
@@ -308,12 +304,18 @@ namespace BankManagement.ManageAccounts_Transactions
 
         private void depositToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // This event Will be implemented later.
+            frmDepositWithdrawal frm = new frmDepositWithdrawal((int)dgvAccounts.CurrentRow.Cells[0].Value, frmDepositWithdrawal.TransactionType.Deposit);
+            frm.ShowDialog();
+
+            _LoadAccountsData();
         }
 
         private void withdrawalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // This event Will be implemented later.
+            frmDepositWithdrawal frm = new frmDepositWithdrawal((int)dgvAccounts.CurrentRow.Cells[0].Value, frmDepositWithdrawal.TransactionType.Withdrawal);
+            frm.ShowDialog();
+
+            _LoadAccountsData();
         }
 
         private void transferToolStripMenuItem_Click(object sender, EventArgs e)
@@ -323,15 +325,15 @@ namespace BankManagement.ManageAccounts_Transactions
 
         private void cmsAccounts_Opening(object sender, CancelEventArgs e)
         {
-            if(dgvAccounts.CurrentRow == null)
+            if (dgvAccounts.CurrentRow == null)
             {
                 cmsAccounts.Enabled = false; // Disable the context menu if no row is selected
             }
             else
             {
                 cmsAccounts.Enabled = true; // Enable the context menu if a row is selected
-                // Get the IsActive value of the selected account
-                
+                                            // Get the IsActive value of the selected account
+
                 bool isActive = (bool)dgvAccounts.CurrentRow.Cells[5].Value;
                 // Show or hide Activate/Deactivate options based on the account status
                 activateAccountToolStripMenuItem.Visible = !isActive; // Show "Activate" if not active
