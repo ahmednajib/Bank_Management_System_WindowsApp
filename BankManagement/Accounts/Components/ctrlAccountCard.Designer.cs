@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.lblClientName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -40,19 +39,9 @@
             this.lblIsActive = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pbClientImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbClientImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 8);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 29);
-            this.label2.TabIndex = 156;
-            this.label2.Text = "Account Details";
             // 
             // lblClientName
             // 
@@ -172,15 +161,27 @@
             this.pbClientImage.Name = "pbClientImage";
             this.pbClientImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pbClientImage.Size = new System.Drawing.Size(151, 149);
-            this.pbClientImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClientImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClientImage.TabIndex = 169;
             this.pbClientImage.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(185, 16);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(199, 29);
+            this.lblTitle.TabIndex = 170;
+            this.lblTitle.Text = "Account Details";
             // 
             // ctrlAccountCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbClientImage);
             this.Controls.Add(this.lblIsActive);
             this.Controls.Add(this.guna2HtmlLabel10);
@@ -192,7 +193,6 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.lblClientName);
-            this.Controls.Add(this.label2);
             this.Name = "ctrlAccountCard";
             this.Size = new System.Drawing.Size(568, 220);
             ((System.ComponentModel.ISupportInitialize)(this.pbClientImage)).EndInit();
@@ -202,7 +202,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblClientName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
@@ -214,5 +213,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblIsActive;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pbClientImage;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

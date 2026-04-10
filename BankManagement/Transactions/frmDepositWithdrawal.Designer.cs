@@ -74,7 +74,7 @@
             this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAmount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtAmount.Location = new System.Drawing.Point(153, 280);
+            this.txtAmount.Location = new System.Drawing.Point(166, 280);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderText = "Enter a valid amount";
             this.txtAmount.SelectedText = "";
@@ -152,7 +152,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtDescription.Location = new System.Drawing.Point(153, 323);
+            this.txtDescription.Location = new System.Drawing.Point(166, 323);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceholderText = "write a description";
             this.txtDescription.SelectedText = "";

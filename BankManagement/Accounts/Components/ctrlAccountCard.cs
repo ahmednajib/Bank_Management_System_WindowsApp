@@ -26,6 +26,14 @@ namespace BankManagement.Accounts.Components
             }
         }
 
+        public string ChangeTitile
+        {
+            set
+            {
+                lblTitle.Text = value.ToString();
+            }
+        }
+
         public clsAccount SelectedAccountInfo => _Account;
 
         public void LoadAccountInfo(int AccountID)

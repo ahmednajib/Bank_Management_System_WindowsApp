@@ -1,4 +1,5 @@
 ﻿using BankManagement.Clients.Add_Update_Client;
+using BankManagement.ManageAccounts_Transactions.Accounts;
 using BLL_BankManagement;
 using System;
 using System.Data;
@@ -291,7 +292,10 @@ namespace BankManagement.Clients.ManageClients
 
         private void addAnAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // This functionality is not implemented yet.
+            frmAddUpdateAccount addAccountForm = new frmAddUpdateAccount();
+            addAccountForm.ShowDialog();
+
+            _LoadClientsData();
         }
 
         private void allAccountsToolStripMenuItem_Click(object sender, EventArgs e)

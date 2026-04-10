@@ -16,5 +16,25 @@ namespace BankManagement.Transactions
         {
             InitializeComponent();
         }
+
+        private void frmTransfer_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtAmount_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
