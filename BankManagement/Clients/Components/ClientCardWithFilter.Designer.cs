@@ -1,6 +1,6 @@
 ﻿namespace BankManagement.Clients.Components
 {
-    partial class ClientCardWithFilter
+    partial class ctrlClientCardWithFilter
     {
         /// <summary> 
         /// Required designer variable.
@@ -149,14 +149,14 @@
             this.ctrlClientCard1.Size = new System.Drawing.Size(665, 310);
             this.ctrlClientCard1.TabIndex = 4;
             // 
-            // ClientCardWithFilter
+            // ctrlClientCardWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.ctrlClientCard1);
             this.Controls.Add(this.gbFilter);
-            this.Name = "ClientCardWithFilter";
+            this.Name = "ctrlClientCardWithFilter";
             this.Size = new System.Drawing.Size(669, 396);
             this.Load += new System.EventHandler(this.ClientCardWithFilter_Load);
             this.gbFilter.ResumeLayout(false);

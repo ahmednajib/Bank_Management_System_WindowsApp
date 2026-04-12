@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,6 +67,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounts\Components\ctrlAccountCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Accounts\Components\ctrlAccountCard.Designer.cs">
+      <DependentUpon>ctrlAccountCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Components\ctrlAccountInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Accounts\Components\ctrlAccountInfo.Designer.cs">
+      <DependentUpon>ctrlAccountInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\frmAccountInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\frmAccountInfo.Designer.cs">
+      <DependentUpon>frmAccountInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clients\frm FindClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +108,12 @@
     </Compile>
     <Compile Include="Clients\Components\ctrlClientCard.Designer.cs">
       <DependentUpon>ctrlClientCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\frmClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients\frmClientInfo.Designer.cs">
+      <DependentUpon>frmClientInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Clients\ManageClients\frmManageClients.cs">
       <SubType>Form</SubType>
@@ -100,6 +139,18 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounts\frmAddUpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\frmAddUpdateAccount.Designer.cs">
+      <DependentUpon>frmAddUpdateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\ManageAccounts&amp;Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\ManageAccounts&amp;Transactions.Designer.cs">
+      <DependentUpon>ManageAccounts&amp;Transactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonalInformation\Components\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +171,60 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transactions\frmDepositWithdrawal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frmDepositWithdrawal.Designer.cs">
+      <DependentUpon>frmDepositWithdrawal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\frmTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frmTransfer.Designer.cs">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ctrlUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddUpdateUser.Designer.cs">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmListUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmListUsers.Designer.cs">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmUserInfo.Designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accounts\Components\ctrlAccountCard.resx">
+      <DependentUpon>ctrlAccountCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\Components\ctrlAccountInfo.resx">
+      <DependentUpon>ctrlAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\frmAccountInfo.resx">
+      <DependentUpon>frmAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\frmAddUpdateAccount.resx">
+      <DependentUpon>frmAddUpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients\frm FindClient.resx">
       <DependentUpon>frm FindClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +237,9 @@
     <EmbeddedResource Include="Clients\Components\ctrlClientCard.resx">
       <DependentUpon>ctrlClientCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Clients\frmClientInfo.resx">
+      <DependentUpon>frmClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients\ManageClients\frmManageClients.resx">
       <DependentUpon>frmManageClients.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\ManageAccounts&amp;Transactions.resx">
+      <DependentUpon>ManageAccounts&amp;Transactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalInformation\Components\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
@@ -160,6 +271,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Transactions\frmDepositWithdrawal.resx">
+      <DependentUpon>frmDepositWithdrawal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frmTransfer.resx">
+      <DependentUpon>frmTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddUpdateUser.resx">
+      <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmListUsers.resx">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,11 +309,7 @@
   <ItemGroup>
     <None Include="images\BankLogo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Currency Exchange\" />
-    <Folder Include="Transactions\" />
-    <Folder Include="Users\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BLL_BankManagement\BLL_BankManagement.csproj">
       <Project>{2895fb28-bbf3-4321-83bf-1aa1ef2d0107}</Project>
@@ -226,6 +354,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MyPicture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

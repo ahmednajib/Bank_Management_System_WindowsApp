@@ -1,4 +1,5 @@
 ﻿using BankManagement.Clients.Add_Update_Client;
+using BankManagement.ManageAccounts_Transactions.Accounts;
 using BLL_BankManagement;
 using System;
 using System.Data;
@@ -206,7 +207,7 @@ namespace BankManagement.Clients.ManageClients
             _LoadClientsData(); // Refresh the data after updating the client
         }
 
-        private void diactivateClientToolStripMenuItem_Click(object sender, EventArgs e)
+        private void deactivateClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int SelectedClientID = Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value);
             clsClient client = clsClient.Find(SelectedClientID);
@@ -266,11 +267,6 @@ namespace BankManagement.Clients.ManageClients
             }
         }
 
-        private void addAnAccountToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // This functionality is not implemented yet.
-        }
-
         private void guna2ContextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
             int SelectedClientID = Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value);
@@ -285,6 +281,26 @@ namespace BankManagement.Clients.ManageClients
 
             diactivateClientToolStripMenuItem.Enabled = client.IsActive;
             activateClientToolStripMenuItem.Enabled = !client.IsActive;
+        }
+
+        private void clientInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientInfo clientInfoForm = new frmClientInfo(Convert.ToInt32(dgvClients.CurrentRow.Cells[0].Value));
+            clientInfoForm.ShowDialog();
+            _LoadClientsData();
+        }
+
+        private void addAnAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateAccount addAccountForm = new frmAddUpdateAccount();
+            addAccountForm.ShowDialog();
+
+            _LoadClientsData();
+        }
+
+        private void allAccountsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // This functionality is not implemented yet.
         }
     }
 }

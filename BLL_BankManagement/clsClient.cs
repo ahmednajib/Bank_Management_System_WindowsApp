@@ -99,8 +99,6 @@ namespace BLL_BankManagement
 
         public static DataTable GetAllClients()
         {
-            // You can choose to call a "GetAllActiveClients" DAL method here 
-            // if you want the dashboard to only show active ones.
             return clsClientData.GetAllClients();
         }
 

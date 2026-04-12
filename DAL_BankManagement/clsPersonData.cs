@@ -8,7 +8,9 @@ namespace DAL_BankManagement
     public class clsPersonData
     {
         // Private helper to fill data safely using Convert
-        private static void _FillPersonInfoFromReader(SqlDataReader reader, ref int PersonID, ref string NationalNo, ref string FirstName, ref string SecondName, ref string ThirdName, ref string LastName, ref DateTime DateOfBirth, ref int Gender, ref string Address, ref string Phone, ref string Email, ref int NationalityCountryID, ref string ImagePath)
+        private static void _FillPersonInfoFromReader(SqlDataReader reader, ref int PersonID, ref string NationalNo, ref string FirstName,
+            ref string SecondName, ref string ThirdName, ref string LastName, ref DateTime DateOfBirth, ref int Gender, ref string Address, 
+            ref string Phone, ref string Email, ref int NationalityCountryID, ref string ImagePath)
         {
             PersonID = Convert.ToInt32(reader["PersonID"]);
             NationalNo = Convert.ToString(reader["NationalNo"]);
@@ -149,13 +151,15 @@ namespace DAL_BankManagement
         public static bool DeletePerson(int PersonID)
         {
             int rowsAffected = 0;
-            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-            using (SqlCommand command = new SqlCommand("SP_DeletePerson", connection))
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString)) 
             {
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@PersonID", PersonID);
-                try { connection.Open(); rowsAffected = command.ExecuteNonQuery(); }
-                catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
+                using (SqlCommand command = new SqlCommand("SP_DeletePerson", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@PersonID", PersonID);
+                    try { connection.Open(); rowsAffected = command.ExecuteNonQuery(); }
+                    catch (Exception ex) { clsLogger.ExceptionLogger(ex, EventLogEntryType.Error); }
+                }
             }
             return (rowsAffected > 0);
         }
