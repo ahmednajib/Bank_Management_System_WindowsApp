@@ -38,6 +38,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAmount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtAmount.Location = new System.Drawing.Point(166, 280);
+            this.txtAmount.Location = new System.Drawing.Point(166, 289);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PlaceholderText = "Enter a valid amount";
             this.txtAmount.SelectedText = "";
@@ -86,7 +87,7 @@
             // 
             this.lblAmount.BackColor = System.Drawing.Color.Transparent;
             this.lblAmount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(9, 285);
+            this.lblAmount.Location = new System.Drawing.Point(9, 294);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(125, 20);
             this.lblAmount.TabIndex = 8;
@@ -152,7 +153,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtDescription.Location = new System.Drawing.Point(166, 323);
+            this.txtDescription.Location = new System.Drawing.Point(166, 332);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PlaceholderText = "write a description";
             this.txtDescription.SelectedText = "";
@@ -163,11 +164,19 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(9, 328);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(9, 337);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(94, 20);
             this.guna2HtmlLabel1.TabIndex = 104;
             this.guna2HtmlLabel1.Text = "Description:";
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillThickness = 2;
+            this.guna2Separator1.Location = new System.Drawing.Point(10, 273);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(568, 10);
+            this.guna2Separator1.TabIndex = 121;
             // 
             // frmDepositWithdrawal
             // 
@@ -175,6 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(589, 435);
+            this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.btnClose);
@@ -204,5 +214,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }

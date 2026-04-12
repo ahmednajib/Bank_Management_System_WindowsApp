@@ -1,5 +1,6 @@
 ﻿using BankManagement.PersonalInformation.Components;
 using BLL_BankManagement;
+using Classes;
 using Global_Classes;
 using System;
 using System.Collections.Generic;
@@ -137,6 +138,8 @@ namespace BankManagement.ManageAccounts_Transactions.Accounts
 
             if (!string.IsNullOrEmpty(txtPinCode.Text.Trim()))
                 _Account.PinCode = clsHashing.ComputeHash(txtPinCode.Text.Trim());
+            
+            _Account.CreatedByUserID = clsGlobal.CurrentUser.UserID;
 
             if (_Account.Save())
             {

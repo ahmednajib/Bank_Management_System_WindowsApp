@@ -190,6 +190,7 @@
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(53, 27);
             this.btnFind.TabIndex = 119;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // txtReceiverAccount
             // 
@@ -211,6 +212,7 @@
             this.txtReceiverAccount.SelectedText = "";
             this.txtReceiverAccount.Size = new System.Drawing.Size(200, 31);
             this.txtReceiverAccount.TabIndex = 118;
+            this.txtReceiverAccount.Validating += new System.ComponentModel.CancelEventHandler(this.txtReceiverAccount_Validating);
             // 
             // guna2HtmlLabel2
             // 

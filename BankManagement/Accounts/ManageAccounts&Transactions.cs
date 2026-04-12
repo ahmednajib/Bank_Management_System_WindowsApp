@@ -320,7 +320,10 @@ namespace BankManagement.ManageAccounts_Transactions
 
         private void transferToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // This event Will be implemented later.
+            frmTransfer frm = new frmTransfer((int)dgvAccounts.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+
+            _LoadAccountsData();
         }
 
         private void cmsAccounts_Opening(object sender, CancelEventArgs e)
