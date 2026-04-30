@@ -125,8 +125,12 @@
     <Compile Include="global classes\clsGlobal.cs" />
     <Compile Include="global classes\clsHashing.cs" />
     <Compile Include="global classes\clsLogger.cs" />
+    <Compile Include="global classes\clsModernTheme.cs" />
     <Compile Include="global classes\clsValidatoin.cs" />
     <Compile Include="global classes\util.cs" />
+    <Compile Include="Dashboard\ctrlDashboardStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

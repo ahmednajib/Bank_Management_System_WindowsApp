@@ -1,6 +1,7 @@
 ﻿using BankManagement.Clients;
 using BankManagement.Clients.Add_Update_Client;
 using BankManagement.Clients.ManageClients;
+using BankManagement.Dashboard;
 using BankManagement.ManageAccounts_Transactions;
 using BankManagement.Users;
 using Classes;
@@ -13,10 +14,53 @@ namespace BankManagement
     public partial class frmDashboard : Form
     {
         private Form activeForm = null;
+        private ctrlDashboardStatistics _dashboardStatistics;
 
         // Define your colors here so you can change them easily in one place
-        private readonly Color SidebarButtonDefaultColor = Color.FromArgb(45, 45, 45); // Your normal sidebar color
-        private readonly Color SidebarButtonActiveColor = Color.DimGray; // Your highlight color
+        private readonly Color SidebarButtonDefaultColor = clsModernTheme.Sidebar;
+        private readonly Color SidebarButtonActiveColor = clsModernTheme.Accent;
+
+        private void LayoutSidebarControls()
+        {
+            int width = pnlSideBar.ClientSize.Width;
+            int margin = 12;
+            int buttonHeight = 40;
+            int buttonWidth = width - (margin * 2);
+            int currentY = 116;
+
+            guna2PictureBox1.Size = new Size(82, 82);
+            guna2PictureBox1.Location = new Point((width - guna2PictureBox1.Width) / 2, 14);
+
+            guna2Separator1.Location = new Point(margin, 106);
+            guna2Separator1.Size = new Size(buttonWidth, 10);
+
+            PlaceSidebarButton(btnManageClients, margin, ref currentY, buttonWidth, buttonHeight);
+            PlaceSidebarButton(btnFindClient, margin, ref currentY, buttonWidth, buttonHeight);
+            PlaceSidebarButton(guna2Button3, margin, ref currentY, buttonWidth, buttonHeight);
+            PlaceSidebarButton(btnManageUsers, margin, ref currentY, buttonWidth, buttonHeight);
+
+            int bottomY = pnlSideBar.ClientSize.Height - 58;
+            btnLogout.Location = new Point(margin, Math.Max(currentY + 18, bottomY));
+            btnLogout.Size = new Size(buttonWidth, buttonHeight);
+
+            btnCurrencyExchange.Location = new Point(margin, btnLogout.Top - 48);
+            btnCurrencyExchange.Size = new Size(buttonWidth, buttonHeight);
+
+            guna2Button2.Location = new Point(margin, btnCurrencyExchange.Top - 48);
+            guna2Button2.Size = new Size(buttonWidth, buttonHeight);
+
+            guna2HtmlLabel2.Location = new Point(margin, guna2Button2.Top - 34);
+
+            guna2Separator2.Location = new Point(margin, guna2HtmlLabel2.Top - 18);
+            guna2Separator2.Size = new Size(buttonWidth, 10);
+        }
+
+        private void PlaceSidebarButton(Guna.UI2.WinForms.Guna2Button button, int margin, ref int y, int width, int height)
+        {
+            button.Location = new Point(margin, y);
+            button.Size = new Size(width, height);
+            y += height + 10;
+        }
 
         private void ResetButtonColors()
         {
@@ -53,16 +97,49 @@ namespace BankManagement
             // 5. Setup basic properties for the child "Card" form
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.None;
-            childForm.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            // This ensures the form fits perfectly inside the padding you set
-            childForm.Bounds = pnlMainContainer.DisplayRectangle;
+            childForm.Dock = DockStyle.Fill;
 
             // 6. Add and show
             pnlMainContainer.Controls.Add(childForm);
             pnlMainContainer.Tag = childForm;
+            clsModernTheme.Apply(childForm);
             childForm.Show();
+        }
+
+        private void ShowDashboardStatistics()
+        {
+            ResetButtonColors();
+            CloseFloatingForms();
+
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm = null;
+            }
+
+            pnlMainContainer.Controls.Clear();
+
+            _dashboardStatistics = new ctrlDashboardStatistics();
+            _dashboardStatistics.RefreshStatistics();
+            pnlMainContainer.Controls.Add(_dashboardStatistics);
+        }
+
+        private void CloseFloatingForms()
+        {
+            Form[] openForms = new Form[Application.OpenForms.Count];
+
+            for (int i = 0; i < Application.OpenForms.Count; i++)
+            {
+                openForms[i] = Application.OpenForms[i];
+            }
+
+            foreach (Form form in openForms)
+            {
+                if (form == this || form == _LoginForm)
+                    continue;
+
+                form.Close();
+            }
         }
 
 
@@ -73,6 +150,10 @@ namespace BankManagement
         {
             InitializeComponent();
             _LoginForm = LoginForm;
+            WindowState = FormWindowState.Maximized;
+            clsModernTheme.Apply(this);
+            LayoutSidebarControls();
+            ShowDashboardStatistics();
         }
 
         private void btnManageClients_Click(object sender, EventArgs e)
@@ -138,6 +219,16 @@ namespace BankManagement
 
             // Pass the form you created for the Client List
             OpenChildForm(new frmManageAccounts_Transactions(), clickedButton);
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            ShowDashboardStatistics();
+        }
+
+        private void frmDashboard_Resize(object sender, EventArgs e)
+        {
+            LayoutSidebarControls();
         }
     }
 }
