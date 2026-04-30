@@ -85,65 +85,74 @@ namespace BankManagement.Transactions
             if (!decimal.TryParse(txtAmount.Text, out decimal amount) || amount <= 0)
                 return;
 
-            if (MessageBox.Show("Are you sure you want to perform this operation", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (_Account.IsActive)
             {
-
-                // Create a new transaction object and populate it with the necessary details
-                _clsTransaction = new clsTransaction();
-
-                _clsTransaction.Amount = amount;
-                _clsTransaction.CreatedByUserID = clsGlobal.CurrentUser.UserID;
-
-                if (_transactionType == TransactionType.Deposit)
+                if (MessageBox.Show("Are you sure you want to perform this operation", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string defaultDescription = $"Money was deposited in {DateTime.Now.ToShortDateString()}";
-                    _clsTransaction.Description = txtDescription.Text.Trim() != string.Empty ? txtDescription.Text.Trim() : defaultDescription;
-                    _clsTransaction.SenderAccountID = 0; // For deposits, sender is external
-                    _clsTransaction.ReceiverAccountID = _Account.AccountID;
 
-                    if (_clsTransaction.PerformNewTransaction(clsTransaction.enTransactionType.Deposit))
+                    // Create a new transaction object and populate it with the necessary details
+                    _clsTransaction = new clsTransaction();
+
+                    _clsTransaction.Amount = amount;
+                    _clsTransaction.CreatedByUserID = clsGlobal.CurrentUser.UserID;
+
+
+                    if (_transactionType == TransactionType.Deposit)
                     {
-                        ctrlAccountCard1.LoadAccountInfo(_accountID); // Refresh account info to show updated balance
-                        _Account = ctrlAccountCard1.SelectedAccountInfo; // Update local account info with refreshed data
+                        string defaultDescription = $"Money was deposited in {DateTime.Now.ToShortDateString()}";
+                        _clsTransaction.Description = txtDescription.Text.Trim() != string.Empty ? txtDescription.Text.Trim() : defaultDescription;
+                        _clsTransaction.SenderAccountID = 0; // For deposits, sender is external
+                        _clsTransaction.ReceiverAccountID = _Account.AccountID;
 
-                        MessageBox.Show($"Successfully deposited {amount:C2}. New balance: {_Account.Balance:C2}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (_clsTransaction.PerformNewTransaction(clsTransaction.enTransactionType.Deposit))
+                        {
+                            ctrlAccountCard1.LoadAccountInfo(_accountID); // Refresh account info to show updated balance
+                            _Account = ctrlAccountCard1.SelectedAccountInfo; // Update local account info with refreshed data
+
+                            MessageBox.Show($"Successfully deposited {amount:C2}. New balance: {_Account.Balance:C2}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("An error occurred while processing the deposit. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("An error occurred while processing the deposit. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        string defaultDescription = $"Money was Wethdrew in {DateTime.Now.ToShortDateString()}";
+                        _clsTransaction.Description = txtDescription.Text.Trim() != string.Empty ? txtDescription.Text.Trim() : defaultDescription;
+
+                        _clsTransaction.SenderAccountID = _Account.AccountID;
+                        _clsTransaction.ReceiverAccountID = 0; // For withdrawals, receiver is external
+
+                        if (amount > _Account.Balance)
+                        {
+                            MessageBox.Show("Insufficient funds for this withdrawal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                        if (_clsTransaction.PerformNewTransaction(clsTransaction.enTransactionType.Withdraw))
+                        {
+                            ctrlAccountCard1.LoadAccountInfo(_accountID); // Refresh account info to show updated balance
+                            _Account = ctrlAccountCard1.SelectedAccountInfo; // Update local account info with refreshed data
+
+                            MessageBox.Show($"Successfully withdrew {amount:C2}. New balance: {_Account.Balance:C2}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("An error occurred while processing the withdrawal. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
                     }
                 }
-                else
-                {
-                    string defaultDescription = $"Money was Wethdrew in {DateTime.Now.ToShortDateString()}";
-                    _clsTransaction.Description = txtDescription.Text.Trim() != string.Empty ? txtDescription.Text.Trim() : defaultDescription;
-
-                    _clsTransaction.SenderAccountID = _Account.AccountID;
-                    _clsTransaction.ReceiverAccountID = 0; // For withdrawals, receiver is external
-
-                    if (amount > _Account.Balance)
-                    {
-                        MessageBox.Show("Insufficient funds for this withdrawal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    if (_clsTransaction.PerformNewTransaction(clsTransaction.enTransactionType.Withdraw))
-                    {
-                        ctrlAccountCard1.LoadAccountInfo(_accountID); // Refresh account info to show updated balance
-                        _Account = ctrlAccountCard1.SelectedAccountInfo; // Update local account info with refreshed data
-
-                        MessageBox.Show($"Successfully withdrew {amount:C2}. New balance: {_Account.Balance:C2}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("An error occurred while processing the withdrawal. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                }
-                txtAmount.Clear();
-                txtAmount.Focus();
             }
+            else
+            {
+                MessageBox.Show("Account is not active. Cannot perform transactions on an inactive account.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            txtAmount.Clear();
+            txtAmount.Focus();
+
         }
     }
 }

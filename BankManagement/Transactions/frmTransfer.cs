@@ -86,6 +86,18 @@ namespace BankManagement.Transactions
                 return;
             }
 
+            if(!_SenderAccount.IsActive)
+            {
+                MessageBox.Show("Sender account is not active. Cannot perform transactions on an inactive account.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!_ReceiverAccount.IsActive)
+            {
+                MessageBox.Show("Receiver account is not active. Cannot perform transactions on an inactive account.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (MessageBox.Show("Are you sure you want to perform this transfer?", "Confirm Transfer", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
